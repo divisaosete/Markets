@@ -11,6 +11,7 @@ def main():
     for name,cmd in commands:
         run=subprocess.run(cmd,cwd=ROOT,env=env,capture_output=True,text=True,encoding='utf8',errors='replace',timeout=180)
         (ROOT/'docs'/name).write_text(run.stdout+run.stderr,encoding='utf8');results.append({'check':name,'exit_code':run.returncode});print(name+': '+('PASS' if run.returncode==0 else 'FAIL'),flush=True)
+        if run.returncode:print(run.stdout+run.stderr,flush=True)
     (ROOT/'docs'/'checks-results.json').write_text(json.dumps({'executed_at':time.time(),'type':'Unitários com fixtures explícitas e verificações estáticas','results':results},ensure_ascii=False,indent=2),encoding='utf8')
     raise SystemExit(0 if all(r['exit_code']==0 for r in results) else 1)
 if __name__=='__main__':main()
