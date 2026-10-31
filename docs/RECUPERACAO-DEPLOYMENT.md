@@ -45,6 +45,24 @@ renovação da lease, heartbeat persistido e liberação da lease ao encerrar.
 Os testes locais usam Python 3.15 no Windows; CI usa Python 3.12 e Node 22
 no Linux. Testes com fixtures são separados das consultas de fontes reais.
 
+`python -m tests.live` consultou fontes reais: passaram Selic, USD/BRL, PIB dos
+EUA, taxa do Canadá, Treasury de 2/5/10/30 anos e calendário BoE. O BCE falhou
+com URLError e o calendário BLS com HTTPError nesta tentativa. Bitcoin e Fed
+reportaram dependência de credenciais/licenças. Esses resultados não equivalem
+a sucesso de todas as fontes; o teste não alterou o JSON público de cotações.
+
+## Resultado remoto
+
+- Branch enviada: `fix/new-era-markets-deployment`.
+- [Pull Request #1](https://github.com/divisaosete/Markets/pull/1), direcionado à main.
+- [Actions 41213402171](https://github.com/divisaosete/Markets/actions/runs/41213402171):
+  sucesso no build do Pull Request em Linux, incluindo testes, auditoria e HTTP estático.
+- O deploy do PR é ignorado por projeto. O workflow agendado só executará após merge.
+- Consulta a `https://divisaosete.github.io/Markets/` retornou HTTP 404 nesta entrega.
+  A publicação pública corrigida ainda não ocorreu.
+- Próximo passo: o usuário revisar e aprovar o merge do PR; depois conferir o
+  workflow de publicação e a URL pública. Nenhum merge foi realizado pelo agente.
+
 ## Publicação e operação
 
 O repositório usa Git Credential Manager e a autenticação existente confirmou
