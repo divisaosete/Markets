@@ -26,7 +26,7 @@ class Providers(unittest.TestCase):
             record=dict(source='Licensed fixture',source_url='https://source.org',unit='USD/bbl',currency='USD',market='ICE',reference='future',frequency='daily',instrument_id='contract',points=[])
             with open(path,'w') as f:json.dump({'assets':{'brent':record}},f)
             with patch.dict(os.environ,{'LICENSED_FEED_PATH':path,'LICENSED_REDISTRIBUTION_APPROVED':'yes'}):
-                with self.assertRaises(Unavailable):fetch(BY_ID['brent'],date(2026,1,1),date(2026,1,3))
+                with self.assertRaises(Unavailable):fetch({**BY_ID['brent'],'provider':'licensed'},date(2026,1,1),date(2026,1,3))
     def test_treasury_maturity_is_not_policy_rate(self):
         a=BY_ID['yield-Estados Unidos-10'];self.assertEqual(a['code'],'BC_10YEAR');self.assertEqual(a['provider'],'treasury');self.assertEqual(a['category'],'yields');self.assertEqual(a['tenor'],10)
 if __name__=='__main__':unittest.main()

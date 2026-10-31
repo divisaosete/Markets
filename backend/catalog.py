@@ -35,3 +35,8 @@ for a in ASSETS:
     if a['category']=='yields' and a['country']=='Estados Unidos':
         a.update(provider='treasury',code=f"BC_{a['tenor']}YEAR",reference='Treasury nominal par yield curve (CMT)')
 OVERVIEW=['ibov','sp500','nasdaq','nikkei','brent','wti','gold','usdbrl','bitcoin','selic','fed']
+
+# Explicit daily spot markets, never substituted with futures or ETFs.
+from backend.providers.eia import SERIES as EIA_SERIES
+for id, (_, code, label, unit) in EIA_SERIES.items():
+    BY_ID[id].update(provider='eia',code=code,unit=unit,currency='USD',frequency='diária (dias publicados)',reference=label + '; spot, sem contrato futuro',instrument=label)

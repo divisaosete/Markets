@@ -33,7 +33,7 @@ export function comparePublished(series,mode='base100',alignment='daily'){
   return available.flatMap(s=>{const values=new Map(s.points.map(p=>[p.date,p.value])),base=values.get(dates[0]);if(base===0&&['base100','percent'].includes(mode))return [];return [{id:s.id,source:s.source,points:dates.map(date=>({date,value:mode==='base100'?values.get(date)/base*100:mode==='percent'?(values.get(date)/base-1)*100:(values.get(date)-base)*(mode==='bps'?100:1)}))}]});
 }
 export function preferredOverview(rows){
-  const rank=['usdbrl','eurbrl','eurusd','selic','boc','ecb','yield-Estados Unidos-10','USA-NY.GDP.MKTP.CD','BRA-NY.GDP.MKTP.CD','gbpusd','usdjpy'];
+  const rank=['usdbrl','eurbrl','eurusd','selic','brent','wti','commodity-29','boc','ecb','yield-Estados Unidos-10','USA-NY.GDP.MKTP.CD','BRA-NY.GDP.MKTP.CD','gbpusd','usdjpy'];
   return rows.filter(r=>r.points.length).sort((a,b)=>(rank.includes(a.id)?rank.indexOf(a.id):100)-(rank.includes(b.id)?rank.indexOf(b.id):100)).slice(0,12).map(r=>r.id);
 }
 export function createStaticClient({dataURL=new URL('./data/market-data.json',import.meta.url).href,fetch:request=(...a)=>globalThis.fetch(...a),now=()=>new Date(),ttl=300000,dynamicFx=false}={}){

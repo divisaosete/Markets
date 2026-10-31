@@ -3,7 +3,22 @@ import assert from 'node:assert/strict';
 import {ASSETS} from '../public/catalog.js';
 import {validatePublished,createStaticClient,seriesWindow,comparePublished,hybridClient,preferredOverview} from '../public/static-data.js';
 import {createDirectFx} from '../public/direct-fx.js';
+import {readFileSync} from 'node:fs';
 const now=()=>new Date('2026-10-31T12:00:00Z');
+test('published EIA spot histories work in chart windows and static comparisons',async()=>{
+ const data=validatePublished(JSON.parse(readFileSync(new URL('../public/data/market-data.json',import.meta.url),'utf8')));
+ const reference=new Date(data.generated_at);
+ const read=createStaticClient({now:()=>reference,fetch:async()=>({ok:true,json:async()=>data})});
+ for(const id of ['brent','wti','commodity-29','commodity-31']){
+  const row=(await read(`series?id=${id}&period=MAX`)).series[0];
+  assert.ok(row.points.length>1000);assert.equal(row.provider,'eia');assert.equal(row.currency,'USD');
+  assert.match(row.reference,/spot/);assert.equal(row.latest.date,row.points.at(-1).date);
+  assert.ok(seriesWindow(row,'1A',reference).points.length>100);
+ }
+ const compared=await read('compare?ids=brent,wti&period=1A');assert.equal(compared.comparison.length,2);
+ assert.ok(compared.comparison.every(r=>r.points.length>100));
+ assert.ok(preferredOverview(data.series).includes('brent'));
+});
 function fixture(){return {schema_version:1,generated_at:now().toISOString(),series:ASSETS.map(a=>({...a,status:'unavailable',reason:'license_required',source:'Explicit unit-test fixture',points:[],latest:null})).map(r=>r.id==='usdbrl'?{...r,status:'ok',reason:'available',points:[{date:'2026-10-29',value:5},{date:'2026-10-30',value:6}],latest:{date:'2026-10-30',value:6}}:r)}}
 test('static client works below a repository path without requesting any Python endpoint',async()=>{
  const urls=[],read=createStaticClient({dataURL:'https://example.github.io/markets/data/market-data.json',now,fetch:async url=>(urls.push(url),{ok:true,json:async()=>fixture()})});

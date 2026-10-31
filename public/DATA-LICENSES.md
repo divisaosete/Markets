@@ -10,5 +10,7 @@ Cada registro JSON identifica fonte, licença, unidade, referência e coleta. Es
 
 Transformações: datas normalizadas para sua frequência original; seleção de janelas, variações e base 100 calculadas; nenhuma interpolação, expectativa ou observação inventada. Fonte e dados originais prevalecem; estes cálculos não são publicação oficial do provedor.
 
-FRED, CoinGecko, índices e commodities não entram automaticamente na publicação. Chave de API não equivale a licença de redistribuição. Históricos sem autorização permanecem indisponíveis. Não são substituídos por ETFs ou outros instrumentos.
+- **EIA — Brent, WTI, Henry Hub e óleo de aquecimento:** downloads XLS oficiais, domínio público com atribuição U.S. Energy Information Administration. Referências spot diárias, sem futuros: Europa Brent FOB e Cushing WTI FOB em USD/barril; Henry Hub em USD/MMBtu; New York Harbor No. 2 Heating Oil FOB em USD/galão dos EUA. Datas são as observações publicadas, sem preenchimento de feriados. Consulta diária no Actions, nunca tempo real. Política: https://www.eia.gov/about/copyrights_reuse.php .
+
+FRED, CoinGecko, índices e as demais commodities não entram automaticamente na publicação. Chave de API não equivale a licença de redistribuição. Históricos sem autorização permanecem indisponíveis. Não são substituídos por ETFs ou outros instrumentos.
 Nos pares com base diferente de EUR, a conversão de base/câmbio cruzado é fornecida pelo Frankfurter a partir das referências BCE; não é uma cotação intradiária de execução.
