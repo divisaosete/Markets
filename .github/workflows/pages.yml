@@ -1,6 +1,8 @@
 name: Publicar beta no GitHub Pages
 on:
   workflow_dispatch:
+  pull_request:
+    branches: [main]
   workflow_call:
     inputs:
       ref:
@@ -20,7 +22,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: github-pages
+  group: github-pages-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   build:
@@ -51,11 +53,15 @@ jobs:
           PUBLIC_API_BASE: ${{ vars.PUBLIC_API_BASE }}
           ENABLE_DIRECT_FX: ${{ vars.ENABLE_DIRECT_FX || 'true' }}
         run: python -m backend.build_pages
+      - name: Validar recursos HTTP sob /Markets/
+        run: python tests/pages_static_smoke.py
       - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+        if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:
           path: _site
   deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 10

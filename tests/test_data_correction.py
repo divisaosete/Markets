@@ -66,11 +66,15 @@ class DataCorrection(unittest.TestCase):
         self.assertEqual(len(result['instruments']),167)
         with self.cache.connect() as db:self.assertEqual(db.execute('SELECT count(*) FROM jobs').fetchone()[0],0)
     def test_worker_renews_lease_while_an_upstream_is_slow(self):
-        import time
+        import threading
+        heartbeat=threading.Event()
+        put=self.cache.put
+        def observe(key,value):
+            put(key,value)
+            if key=='worker':heartbeat.set()
         def slow(*_):
-            deadline=time.monotonic()+2
-            while not self.cache.get('worker') and time.monotonic()<deadline:time.sleep(.005)
+            self.assertTrue(heartbeat.wait(10),'Heartbeat did not finish while the upstream was blocked')
             self.assertIsNotNone(self.cache.get('worker'));return True
-        with patch('backend.scheduler.HEARTBEAT_SECONDS',.01),patch('backend.scheduler._cycle',side_effect=slow),patch.object(self.cache,'renew',wraps=self.cache.renew) as renew:
+        with patch('backend.scheduler.HEARTBEAT_SECONDS',.01),patch('backend.scheduler._cycle',side_effect=slow),patch.object(self.cache,'put',side_effect=observe),patch.object(self.cache,'renew',wraps=self.cache.renew) as renew:
             self.assertTrue(tick(self.cache,Service(self.cache)));self.assertGreater(renew.call_count,0)
         self.assertIsNone(self.cache.job('_scheduler')['until'])
