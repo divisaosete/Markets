@@ -1,0 +1,1 @@
+{"name":"new-era-markets","private":true,"type":"module","scripts":{"test":"node --test tests/frontend.test.js tests/frontend-audit.test.js tests/frontend-loading.test.js tests/frontend-integration.test.js tests/frontend-pages.test.js"}}

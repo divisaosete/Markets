@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-31",
+  "public_json_sha256": "1ce47867f48f25c0783701e17b5a2ac03162a9983c25da66ffc5f33bbacb50e9",
+  "available": 30,
+  "catalog": 167,
+  "cors_checked": {
+    "origin": "https://example.github.io",
+    "host": "api.frankfurter.dev",
+    "http_status": 200,
+    "access_control_allow_origin": "*"
+  },
+  "remote_deployment_executed": false,
+  "proof": "pages-browser-results.json"
+}

@@ -1,0 +1,20 @@
+import {fmt,escape as esc,dateLabel} from './data.js';
+import {variation} from './analytics.js';
+export function comparisonHelpMarkup(){return `<details class="scale-help"><summary aria-label="Entenda as escalas do comparador" title="Entenda as escalas">?</summary><div class="scale-help-text"><p><strong>Base 100:</strong> cada série começa em 100 na primeira data comum. Se passar a 110, subiu 10% desde esse início. Assim você compara trajetórias mesmo quando os preços têm valores diferentes.</p><p><strong>Retorno acumulado (%):</strong> mostra essa mesma variação partindo de 0%. Uma alta de 10% aparece como +10%, em vez de 110. O resultado depende do período escolhido; não inclui automaticamente dividendos ou outros rendimentos.</p><p><strong>Variação em p.p. (taxas):</strong> mostra a diferença em relação à taxa inicial. De 10% para 11% corresponde a +1 ponto percentual.</p><p><strong>Variação em pontos-base:</strong> expressa a mesma diferença em outra unidade. 1 ponto percentual = 100 pontos-base; de 10% para 10,25% corresponde a +25 pb.</p><p>As duas últimas opções ficam disponíveis quando todos os ativos selecionados são taxas de juros ou rendimentos. A comparação usa apenas datas comuns, sem preencher lacunas.</p></div></details>`}
+export const STATUS_LABELS={ok:'Disponível',stale:'Dado atrasado',pending:'Atualizando',unavailable:'Indisponível',empty:'Sem observações'};
+export const REASON_LABELS={publication_review:'Redistribuição em revisão',credential_required:'Credencial necessária',license_required:'Provedor licenciado necessário',source_failure:'Fonte temporariamente indisponível',no_observations:'Histórico não disponível',awaiting_sync:'Atualização em andamento',quota_limited:'Limite da fonte',reference_stale:'Dados atrasados',cached_after_failure:'Dados atrasados'};
+export function statusMarkup(s){const label=s?.latest?STATUS_LABELS[s?.status]:REASON_LABELS[s?.reason]||STATUS_LABELS[s?.status];return `<span class="status ${esc(s?.status)}" title="${esc(s?.message||'Estado da disponibilidade do dado; não indica abertura do mercado.')}">${esc(label||'Aguardando')}</span>`}
+export function cardMarkup(a,s={points:[]}){
+  const latest=a.category==='crypto'&&s.quote_time&&s.quote_price!=null&&!s.quote_error?{date:s.quote_time,value:s.quote_price}:s.latest;
+  const delta=a.category==='crypto'?s.change_24h:s.change;
+  const compact=v=>v!=null&&Math.abs(v)>=1e9?new Intl.NumberFormat('pt-BR',{notation:'compact',maximumFractionDigits:2}).format(v):fmt(v);
+  const kind=s.update_type==='periodic_release'||s.frequency==='anual'?'Divulgação periódica · anual':s.update_type==='daily_reference'||['fx','rates','yields'].includes(a.category)?'Referência diária':a.category==='crypto'?'Cotação agregada':'Frequência conforme fonte';
+  const points=(s.points||[]).slice(-35);let spark='';
+  if(points.length>1){const values=points.map(p=>p.value),lo=Math.min(...values),span=Math.max(...values)-lo||1;spark=`<svg class="spark" viewBox="0 0 180 25" preserveAspectRatio="none" aria-hidden="true"><path d="${values.map((v,i)=>`${i?'L':'M'}${i/(values.length-1)*180},${23-(v-lo)/span*21}`).join(' ')}"/></svg>`}
+  return `<a class="card" href="#${a.category==='yields'?'rates':a.category}/${encodeURIComponent(a.id)}"><div class="card-top"><span>${esc(a.name)}</span>${statusMarkup(s)}</div><div class="ticker">${esc(a.country||a.region||a.id.toUpperCase())}</div><div class="value ${latest?'':'empty'}" title="${latest?esc(fmt(latest.value,6)+' '+(s.unit||a.unit)):''}">${latest?compact(latest.value):'—'} <small class="subtle">${esc(s.unit||a.unit)}</small></div><div class="change ${delta>=0?'positive':delta<0?'negative':'subtle'}">${esc(variation(a,s,compact))}</div>${spark}<div class="meta">${esc(s.source||'Fonte pendente')}<br>${esc(kind)}<br>Referência: ${esc(dateLabel(latest?.date))}<br>Coleta: ${esc(dateLabel(s.synced_at))}</div></a>`;
+}
+export function failureNotice(failures,fallback){
+  if(!failures.length)return fallback;
+  const messages=[...new Set(failures.map(s=>s.replace(/^(Cartões\/tabela|Gráfico): /,'')))];
+  return messages.join(' · ');
+}

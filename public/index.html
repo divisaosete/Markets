@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e17">
+  <meta name="description" content="New Era Markets — inteligência financeira e macroeconômica com fontes identificadas.">
+  <meta name="markets-api-base" content="">
+  <title>New Era Markets | New Era Labs</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Ir para conteúdo</a>
+  <aside aria-label="New Era Markets">
+    <a class="brand" href="#overview"><span class="mark">N<span>↗</span></span><span>NEW ERA<strong>MARKETS</strong><small>NEW ERA LABS</small></span></a>
+    <div class="nav-label">INTELIGÊNCIA DE MERCADO</div>
+    <nav aria-label="Módulos" id="nav"><a href="#overview" class="active" aria-current="page"><span>◈</span>Visão Geral</a>
+<a href="#indices"><span>▥</span>Bolsas Globais</a>
+<a href="#commodities"><span>◇</span>Commodities</a>
+<a href="#fx"><span>⇄</span>Câmbio</a>
+<a href="#crypto"><span>₿</span>Criptomoedas</a>
+<a href="#macro"><span>◎</span>Macroeconomia</a>
+<a href="#rates"><span>⌁</span>Juros Globais</a>
+<a href="#compare"><span>⊞</span>Comparador de Ativos</a>
+<a href="#calendar"><span>▦</span>Calendário Econômico</a>
+<a href="#sources"><span>≋</span>Fontes e Metodologia</a></nav>
+    <footer><span class="dot"></span> Ciência além do horizonte.<br><small>Per Vitam, Ad Astra.</small></footer>
+  </aside>
+  <div class="shell">
+    <header>
+      <div class="breadcrumb">NEW ERA LABS <span>/</span> INTELIGÊNCIA FINANCEIRA</div>
+      <div id="health" role="status">Carregando dados publicados…</div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="heading"><div><p class="eyebrow">OBSERVATÓRIO GLOBAL</p><h1 id="title">Visão Geral</h1><p id="description">Uma leitura integrada dos mercados globais.</p></div><button id="refresh" class="secondary" type="button">↻ Atualizar leitura</button></div>
+      <div id="notice" class="notice" role="status">Verificando a conexão e a disponibilidade dos dados…</div>
+      <noscript><div class="notice">Ative o JavaScript para usar filtros, navegação e gráficos. O layout permanece disponível; nenhum valor foi estimado.</div></noscript>
+      <section id="content" aria-label="Conteúdo do módulo" aria-live="polite">
+        <div id="cards" class="grid" hidden><a class="card" href="#indices/ibov"><div class="card-top"><span>Ibovespa</span><span class="status">Indisponível</span></div><div class="value empty">— <small class="subtle">pontos</small></div><div class="meta">Valor e variação indisponíveis<br>Referência: —<br>Fonte: aguardando conexão</div></a>
+<a class="card" href="#indices/sp500"><div class="card-top"><span>S&amp;P 500</span><span class="status">Indisponível</span></div><div class="value empty">— <small class="subtle">pontos</small></div><div class="meta">Valor e variação indisponíveis<br>Referência: —<br>Fonte: aguardando conexão</div></a>
+<a class="card" href="#indices/nasdaq"><div class="card-top"><span>Nasdaq Composite</span><span class="status">Indisponível</span></div><div class="value empty">— <small class="subtle">pontos</small></div><div class="meta">Valor e variação indisponíveis<br>Referência: —<br>Fonte: aguardando conexão</div></a>
+<a class="card" href="#indices/nikkei"><div class="card-top"><span>Nikkei 225</span><span class="status">Indisponível</span></div><div class="value empty">— <small class="subtle">pontos</small></div><div class="meta">Valor e variação indisponíveis<br>Referência: —<br>Fonte: aguardando conexão</div></a>
+<a class="card" href="#commodities/brent"><div class="card-top"><span>Petróleo Brent</span><span class="status">Indisponível</span></div><div class="value empty">— <small class="subtle"></small></div><div class="meta">Valor e variação indisponíveis<br>Referência: —<br>Fonte: aguardando conexão</div></a>
+<a class="card" href="#commodities/wti"><div class="card-top"><span>Petróleo WTI</span><span class="status">Indisponível</span></div><div class="value empty">— <small class="subtle"></small></div><div class="meta">Valor e variação indisponíveis<br>Referência: —<br>Fonte: aguardando conexão</div></a>
+<a class="card" href="#commodities/gold"><div class="card-top"><span>Ouro</span><span class="status">Indisponível</span></div><div class="value empty">— <small class="subtle"></small></div><div class="meta">Valor e variação indisponíveis<br>Referência: —<br>Fonte: aguardando conexão</div></a>
+<a class="card" href="#fx/usdbrl"><div class="card-top"><span>USD/BRL</span><span class="status">Indisponível</span></div><div class="value empty">— <small class="subtle">BRL</small></div><div class="meta">Valor e variação indisponíveis<br>Referência: —<br>Fonte: aguardando conexão</div></a>
+<a class="card" href="#crypto/bitcoin"><div class="card-top"><span>Bitcoin</span><span class="status">Indisponível</span></div><div class="value empty">— <small class="subtle">USD</small></div><div class="meta">Valor e variação indisponíveis<br>Referência: —<br>Fonte: aguardando conexão</div></a>
+<a class="card" href="#rates/selic"><div class="card-top"><span>Selic meta</span><span class="status">Indisponível</span></div><div class="value empty">— <small class="subtle">% a.a.</small></div><div class="meta">Valor e variação indisponíveis<br>Referência: —<br>Fonte: aguardando conexão</div></a>
+<a class="card" href="#rates/fed"><div class="card-top"><span>Federal Reserve</span><span class="status">Indisponível</span></div><div class="value empty">— <small class="subtle">%</small></div><div class="meta">Valor e variação indisponíveis<br>Referência: —<br>Fonte: aguardando conexão</div></a></div>
+        <section class="panel"><div class="panel-head"><div><h2 id="chart-title">Histórico de mercado</h2><p>Os gráficos são preenchidos somente com dados verificáveis.</p></div></div><div id="chart" class="chart"><div class="empty-state"><strong>Série indisponível</strong><span>Aguarde o carregamento dos JSONs públicos; nenhuma observação será estimada.</span></div></div></section>
+      </section>
+      <footer class="page-footer">NEW ERA MARKETS <span>Inteligência financeira e econômica. • Dados informativos; consulte a fonte.</span></footer>
+    </main>
+  </div>
+  <script type="module" src="./bootstrap.js"></script>
+</body>
+</html>

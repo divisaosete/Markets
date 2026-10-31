@@ -1,0 +1,150 @@
+{
+  "home": {
+    "background": "rgba(0, 0, 0, 0)",
+    "cards": 12,
+    "coverage": [
+      "Cobertura futura · 137 instrumentos ainda indisponíveis"
+    ],
+    "empty": 0,
+    "health": "● Dados publicados · 30 indicadores · atualização periódica",
+    "macroValues": [
+      {
+        "contentWidth": 190,
+        "text": "30,77 tri USD correntes",
+        "title": "30.769.700.000.000 USD correntes",
+        "width": 190
+      },
+      {
+        "contentWidth": 190,
+        "text": "2,28 tri USD correntes",
+        "title": "2.279.920.092.492,13 USD correntes",
+        "width": 190
+      }
+    ]
+  },
+  "fx": [
+    {
+      "date": "2026-10-30",
+      "id": "usdbrl",
+      "legend": "USD/BRL · Última do período: 5,4325 BRL · 30/10/2026",
+      "svg": "Gráfico BRL; 255 datas de referência",
+      "table": "5,4325 BRL",
+      "unit": "BRL",
+      "value": "5.4325"
+    },
+    {
+      "date": "2026-10-30",
+      "id": "eurbrl",
+      "legend": "EUR/BRL · Última do período: 6,0692 BRL · 30/10/2026",
+      "svg": "Gráfico BRL; 255 datas de referência",
+      "table": "6,0692 BRL",
+      "unit": "BRL",
+      "value": "6.0692"
+    },
+    {
+      "date": "2026-10-30",
+      "id": "eurusd",
+      "legend": "EUR/USD · Última do período: 1,1172 USD · 30/10/2026",
+      "svg": "Gráfico USD; 255 datas de referência",
+      "table": "1,1172 USD",
+      "unit": "USD",
+      "value": "1.1172"
+    },
+    {
+      "date": "2026-10-30",
+      "id": "gbpusd",
+      "legend": "GBP/USD · Última do período: 1,3399 USD · 30/10/2026",
+      "svg": "Gráfico USD; 255 datas de referência",
+      "table": "1,3399 USD",
+      "unit": "USD",
+      "value": "1.3399"
+    },
+    {
+      "date": "2026-10-30",
+      "id": "usdjpy",
+      "legend": "USD/JPY · Última do período: 157,25 JPY · 30/10/2026",
+      "svg": "Gráfico JPY; 255 datas de referência",
+      "table": "157,25 JPY",
+      "unit": "JPY",
+      "value": "157.25"
+    }
+  ],
+  "periods": [
+    {
+      "legend": "USD/BRL · Última do período: 5,4325 BRL · 30/10/2026",
+      "lines": 1,
+      "period": "1M",
+      "points": 1,
+      "svg": "Gráfico BRL; 22 datas de referência"
+    },
+    {
+      "legend": "USD/BRL · Última do período: 5,4325 BRL · 30/10/2026",
+      "lines": 1,
+      "period": "5D",
+      "points": 1,
+      "svg": "Gráfico BRL; 5 datas de referência"
+    },
+    {
+      "legend": "USD/BRL · Última do período: 5,4325 BRL · 30/10/2026",
+      "lines": 0,
+      "period": "1D",
+      "points": 1,
+      "svg": "Gráfico BRL; 1 datas de referência"
+    }
+  ],
+  "dynamic": {
+    "legend": "USD/BRL · Última do período: 5,4325 BRL · 30/10/2026",
+    "meta": "Disponível Referência publicada; não é preço em tempo real. · Fonte: Frankfurter · BCE · Sincronização: 31/10/2026, 09:45:12diária · Última referência: 30/10/2026 · Variação calculada entre últimas observações disponíveis. Consulta direta · referência diária · Unidade: BRL · Referência: Referência diária BCE; não é cotação intradiária"
+  },
+  "desktop": {
+    "contentWidth": 1265,
+    "rootBackground": "rgb(8, 14, 23)",
+    "svg": {
+      "bottom": 847.84375,
+      "height": 320,
+      "left": 301,
+      "right": 1208,
+      "top": 527.84375,
+      "width": 907,
+      "x": 301,
+      "y": 527.84375
+    },
+    "viewport": 1265
+  },
+  "mobile": {
+    "contentWidth": 375,
+    "svgHeight": 320,
+    "svgWidth": 309,
+    "viewport": 375
+  },
+  "compare": {
+    "help": "Entenda as escalas do comparador",
+    "legend": "USD/BRL · Última do período: 104,7 base 100 · 30/10/2026EUR/BRL · Última do período: 103,53 base 100 · 30/10/2026",
+    "lines": 2,
+    "svg": "Gráfico base 100; 22 datas de referência"
+  },
+  "macro": {
+    "marker": "<circle cx=\"285\" cy=\"47.00000000000004\" r=\"4\" fill=\"#53d4ee\" data-series-id=\"BRA-NY.GDP.MKTP.CD\" data-date=\"2025\" data-value=\"2279920092492.13\" data-unit=\"USD correntes\" data-source=\"World Bank · WDI\"><title>PIB: 2.279.920.092.492,13 USD correntes · 2025 · World Bank · WDI</title></circle>",
+    "meta": "Disponível Referência publicada; não é preço em tempo real. · Fonte: World Bank · WDI · Sincronização: 31/10/2026, 08:49:26anual · Última referência: 2025 · Variação calculada entre últimas observações disponíveis. JSON publicado · atualização periódica · Unidade: USD correntes · Referência: World Development Indicators; atividade industrial não é produção industrial mensal",
+    "period": "5A",
+    "svg": "Gráfico USD correntes; 5 datas de referência"
+  },
+  "selic": {
+    "marker": "<circle cx=\"285\" cy=\"83.20689655172413\" r=\"4\" fill=\"#53d4ee\" data-series-id=\"selic\" data-date=\"2026-10-31\" data-value=\"13.75\" data-unit=\"% a.a.\" data-source=\"Banco Central do Brasil · SGS\"><title>Selic meta: 13,75 % a.a. · 31/10/2026 · Banco Central do Brasil · SGS</title></circle>",
+    "meta": "Disponível Referência publicada; não é preço em tempo real. · Fonte: Banco Central do Brasil · SGS · Sincronização: 31/10/2026, 08:49:26diária · Última referência: 31/10/2026 · Variação calculada entre últimas observações disponíveis. JSON publicado · atualização periódica · Unidade: % a.a.Decisões de política monetária e fontes oficiaisPróxima reunião não integrada; consulte a autoridade monetária.Histórico de decisões não integrado. Observações diárias do gráfico não equivalem a datas de decisão.Consultar autoridade monetária ↗",
+    "svg": "Gráfico % a.a.; 1826 datas de referência"
+  },
+  "treasury": {
+    "marker": "<circle cx=\"285\" cy=\"66.6212121212121\" r=\"4\" fill=\"#53d4ee\" data-series-id=\"yield-Estados Unidos-10\" data-date=\"2026-10-30\" data-value=\"4.94\" data-unit=\"%\" data-source=\"US Treasury · Daily Par Yield Curve\"><title>Estados Unidos · 10 anos: 4,94 % · 30/10/2026 · US Treasury · Daily Par Yield Curve</title></circle>",
+    "spread": "Spread 10Y–2Y: 0,38 p.p. (38 pb) · 30/10/2026. Curva apenas com vencimentos publicados na mesma data.",
+    "svg": "Gráfico %; 1249 datas de referência"
+  },
+  "unavailable": {
+    "message": "Provedor licenciado necessário Fonte licenciada e autorização de exibição pública necessárias. · Fonte: pendente · Sincronização: —conforme fonte · Última referência: — · Variação calculada entre últimas observações disponíveis. JSON publicado · atualização periódica · Unidade: pontos · Moeda: BRL · Referência: Índice à vista",
+    "svg": false,
+    "table": "IbovespaÍndice à vistaBrasil— pontosVariação indisponível—licensedProvedor licenciado necessárioColeta: —",
+    "title": "Ibovespa"
+  },
+  "executed_at": "2026-10-31T12:46:59.054Z",
+  "method": "Navegador real em /markets/, servido somente por HTTP estático, sem API/worker; preços e referências do JSON público e do complemento direto autorizado."
+}

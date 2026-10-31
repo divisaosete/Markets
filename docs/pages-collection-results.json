@@ -1,0 +1,163 @@
+{
+  "available": 30,
+  "changed": true,
+  "results": [
+    {
+      "id": "usdbrl",
+      "observations": 1282,
+      "result": "PASS"
+    },
+    {
+      "id": "eurbrl",
+      "observations": 1282,
+      "result": "PASS"
+    },
+    {
+      "id": "eurusd",
+      "observations": 1282,
+      "result": "PASS"
+    },
+    {
+      "id": "gbpusd",
+      "observations": 1282,
+      "result": "PASS"
+    },
+    {
+      "id": "usdjpy",
+      "observations": 1282,
+      "result": "PASS"
+    },
+    {
+      "id": "usdcny",
+      "observations": 1282,
+      "result": "PASS"
+    },
+    {
+      "id": "usdchf",
+      "observations": 1282,
+      "result": "PASS"
+    },
+    {
+      "id": "audusd",
+      "observations": 1282,
+      "result": "PASS"
+    },
+    {
+      "id": "usdcad",
+      "observations": 1282,
+      "result": "PASS"
+    },
+    {
+      "id": "usdmxn",
+      "observations": 1282,
+      "result": "PASS"
+    },
+    {
+      "id": "selic",
+      "observations": 1827,
+      "result": "PASS"
+    },
+    {
+      "id": "ecb",
+      "kind": "URLError",
+      "preserved": 0,
+      "result": "FAIL"
+    },
+    {
+      "id": "boc",
+      "observations": 1292,
+      "result": "PASS"
+    },
+    {
+      "id": "BRA-NY.GDP.MKTP.CD",
+      "observations": 66,
+      "result": "PASS"
+    },
+    {
+      "id": "BRA-NY.GDP.MKTP.KD.ZG",
+      "observations": 65,
+      "result": "PASS"
+    },
+    {
+      "id": "USA-NY.GDP.MKTP.CD",
+      "observations": 66,
+      "result": "PASS"
+    },
+    {
+      "id": "USA-NY.GDP.MKTP.KD.ZG",
+      "observations": 65,
+      "result": "PASS"
+    },
+    {
+      "id": "EMU-NY.GDP.MKTP.CD",
+      "observations": 66,
+      "result": "PASS"
+    },
+    {
+      "id": "EMU-NY.GDP.MKTP.KD.ZG",
+      "observations": 65,
+      "result": "PASS"
+    },
+    {
+      "id": "CHN-NY.GDP.MKTP.CD",
+      "observations": 66,
+      "result": "PASS"
+    },
+    {
+      "id": "CHN-NY.GDP.MKTP.KD.ZG",
+      "observations": 65,
+      "result": "PASS"
+    },
+    {
+      "id": "JPN-NY.GDP.MKTP.CD",
+      "observations": 66,
+      "result": "PASS"
+    },
+    {
+      "id": "JPN-NY.GDP.MKTP.KD.ZG",
+      "observations": 65,
+      "result": "PASS"
+    },
+    {
+      "id": "GBR-NY.GDP.MKTP.CD",
+      "observations": 66,
+      "result": "PASS"
+    },
+    {
+      "id": "GBR-NY.GDP.MKTP.KD.ZG",
+      "observations": 65,
+      "result": "PASS"
+    },
+    {
+      "id": "IND-NY.GDP.MKTP.CD",
+      "observations": 66,
+      "result": "PASS"
+    },
+    {
+      "id": "IND-NY.GDP.MKTP.KD.ZG",
+      "observations": 65,
+      "result": "PASS"
+    },
+    {
+      "id": "yield-Estados Unidos-2",
+      "observations": 1249,
+      "result": "PASS"
+    },
+    {
+      "id": "yield-Estados Unidos-5",
+      "observations": 1249,
+      "result": "PASS"
+    },
+    {
+      "id": "yield-Estados Unidos-10",
+      "observations": 1249,
+      "result": "PASS"
+    },
+    {
+      "id": "yield-Estados Unidos-30",
+      "observations": 1249,
+      "result": "PASS"
+    }
+  ],
+  "series": 167
+}

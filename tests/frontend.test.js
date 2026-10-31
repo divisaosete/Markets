@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {chartModel} from '../public/chart.js';
+import {escape,safeURL,dateLabel} from '../public/data.js';
+test('chart handles empty and a single observation',()=>{assert.equal(chartModel([]),null);const m=chartModel([{points:[{date:'2025-01-01',value:5}]}]);assert.ok(m.max>m.min);assert.equal(m.dates.length,1)});
+test('chart zoom changes visible points without manufacturing observations',()=>{const points=Array.from({length:100},(_,i)=>({date:String(i).padStart(3,'0'),value:i}));const m=chartModel([{points}],[.25,.5]);assert.ok(m.dates.length<30);assert.ok(m.rows[0].points.every(p=>points.includes(p)))});
+test('chart ignores nonfinite observations and preserves gaps',()=>{const m=chartModel([{points:[{date:'a',value:1},{date:'c',value:2},{date:'d',value:NaN}]}]);assert.deepEqual(m.dates,['a','c'])});
+test('escaping and URL validation protect provider output',()=>{assert.equal(safeURL('javascript:alert(1)'),'#');assert.ok(!escape('<img onerror="x">').includes('<'));assert.equal(dateLabel('2025-03-01'),'01/03/2025')});
+test('all ten original routes are preserved',()=>{const app=readFileSync('public/app.js','utf8');for(const route of ['overview','indices','commodities','fx','crypto','macro','rates','compare','calendar','sources'])assert.ok(app.includes("'"+route+"'"))});
+test('responsive breakpoints and WordPress template are present (static check)',()=>{const css=readFileSync('public/styles.css','utf8');assert.ok(css.includes('max-width:800px'));assert.ok(css.includes('overflow-x:auto'));const html=readFileSync('deploy/wordpress.html','utf8');assert.ok(html.includes('loading="lazy"'));assert.ok(html.includes('title="New Era Markets"'));assert.ok(!html.includes('https://example.com'))});
