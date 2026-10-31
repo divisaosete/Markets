@@ -8,7 +8,6 @@ from backend.validation import normalize_points
 ROOT=Path(__file__).resolve().parent.parent
 DEFAULT=ROOT/'public/data/market-data.json'
 POLICIES={
- 'eia':('US public domain; EIA attribution','https://www.eia.gov/about/copyrights_reuse.php',86400),
  'bcb':('ODbL-1.0','https://dadosabertos.bcb.gov.br/dataset/432-taxa-de-juros---meta-selic-definida-pelo-copom',86400),
  'fx':('ECB reuse with attribution','https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html',21600),
  'worldbank':('CC-BY-4.0 + World Bank terms','https://datacatalog.worldbank.org/public-licenses',604800),
@@ -22,8 +21,9 @@ FIELDS={'id','name','symbol','category','country','provider','source','source_ur
 def approved(a):return a['provider'] in POLICIES and (a['provider']!='worldbank' or a['code'] in GDP_CODES)
 def empty(a):
     p=a['provider'];policy=POLICIES.get(p)
-    reason='publication_review' if p=='worldbank' and not approved(a) else 'credential_required' if p in ('fred','coingecko') else 'license_required' if p=='licensed' else 'awaiting_sync'
+    reason='publication_review' if p=='eia' or p=='worldbank' and not approved(a) else 'credential_required' if p in ('fred','coingecko') else 'license_required' if p=='licensed' else 'awaiting_sync'
     message={'publication_review':'Redistribuição desta série ainda em revisão para a beta pública.','credential_required':'Coleta em servidor/Actions e revisão dos direitos exigem credencial; nunca inserir chave no navegador.','license_required':'Fonte licenciada e autorização de exibição pública necessárias.','awaiting_sync':'Primeira coleta pública ainda não concluída.'}[reason]
+    if p=='eia':message='Histórico disponível apenas para validação local. Publicação suspensa até confirmar os direitos dos dados Refinitiv/LSEG distribuídos pela EIA.'
     currency=a.get('currency') or (a['code'].split('/')[1] if p=='fx' else 'USD' if a['unit'].startswith('USD') else None)
     return {'id':a['id'],'name':a['name'],'symbol':a['code'] or a['id'],'category':a['category'],'country':a.get('country',''),'provider':p,'unit':a['unit'],'currency':currency,'frequency':a.get('frequency','conforme fonte'),'reference':a.get('reference',''),'instrument':a.get('instrument',''),'delivery':'static','update_type':'periodic_release' if a['category']=='macro' else 'daily_reference','license':policy[0] if policy and approved(a) else 'Pendente de autorização/revisão','license_url':policy[1] if policy else '', 'source':{'bcb':'Banco Central do Brasil · SGS','fx':'Frankfurter · BCE','worldbank':'World Bank · WDI','ecb':'Banco Central Europeu','boc':'Bank of Canada · Valet','treasury':'US Treasury','eia':'U.S. Energy Information Administration · EIA'}.get(p,p),'source_url':a.get('source_url',''),'attribution':'Fonte indicada por série; New Era Labs não é endossado pelos provedores.','transformations':'Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.','expected_interval_seconds':policy[2] if policy else None,'status':'unavailable','reason':reason,'message':message,'points':[],'latest':None,'synced_at':None}
 
@@ -76,7 +76,6 @@ def collect(output=DEFAULT,fetcher=None,now=None,ids=None,force=False,state_path
     reports=[];rows=[]
     for a in ASSETS:
         before=old.get(a['id'],empty(a))
-        if a['provider']=='eia' and not before['points']:before=empty(a)
         r=dict(before)
         r['currency']=r.get('currency') or empty(a)['currency']
         if not approved(a) or ids is not None and a['id'] not in ids:rows.append(r);continue
@@ -85,7 +84,6 @@ def collect(output=DEFAULT,fetcher=None,now=None,ids=None,force=False,state_path
         try:
             start=date(1960,1,1) if a['category']=='macro' else today-timedelta(days=1826)
             if a['provider']=='ecb':start=date(1999,1,1)
-            if a['provider']=='eia':start=date(1980,1,1)
             data=fetcher(a,start,today);pts=normalize_points(data['points'],today)
             if not pts:raise ValueError('Empty upstream history')
             if a['provider']=='worldbank':pts=normalize_points([{**p,'date':p['date'][:4]} for p in pts],today)

@@ -2,9 +2,9 @@
 
 Base: `origin/main` em `759e182`, árvore local limpa; branch `feature/expand-market-data`. Nenhum ETF ou futuro substitui um índice ou preço spot.
 
-## Fontes aprovadas e testadas
+## Energia testada localmente; publicação bloqueada
 
-EIA publica os arquivos XLS por links explícitos “Download Data”, sem chave, distintos da API v2 que exige cadastro. Os quatro arquivos foram baixados e seus cabeçalhos, mercados, unidades e observações foram verificados. A [política EIA](https://www.eia.gov/about/copyrights_reuse.php) permite reprodução e distribuição dos seus dados com atribuição; material de terceiros não recebe autorização automática.
+Os quatro downloads XLS da EIA foram validados tecnicamente, mas **não estão aprovados para redistribuição pública**. As [notas de petróleo](https://www.eia.gov/dnav/pet/TblDefs/pet_pri_spt_tbldef2.asp) e [gás spot](https://www.eia.gov/dnav/ng/TblDefs/ng_pri_fut_tbldef2.asp) identificam Refinitiv/LSEG como fonte. A [política EIA](https://www.eia.gov/about/copyrights_reuse.php) ressalva materiais de terceiros; falta autorização específica aplicável aos quatro históricos. A conclusão anterior de domínio público foi retirada. Dados completos e amostras ficam somente em `var/`, ignorado pelo Git.
 
 | Série | Download oficial | Natureza | Unidade | Início incorporado |
 |---|---|---|---|---|
@@ -15,7 +15,7 @@ EIA publica os arquivos XLS por links explícitos “Download Data”, sem chave
 
 Frequência: diária nos dias publicados, com atraso; última observação na coleta: 27/10/2026. Não são cotações de execução nem dados em tempo real. O coletor solicita arquivos Excel com o cabeçalho Accept correspondente: solicitar JSON resultou em HTTP 406 em três arquivos. Não houve contorno de bloqueios ou autenticação.
 
-Os downloads não publicam nesta documentação uma quota contratual. A aplicação limita a uma consulta por série a cada 24 horas, com espaçamento compartilhado de no mínimo 2,1 segundos por host; o workflow verifica fontes a cada seis horas, respeitando os intervalos persistidos. HTTP 429/503 respeita Retry-After com adiamento persistido e preservação de cache; erros de formato, série, unidade ou histórico também preservam os dados anteriores. Não há retentativas em laço. `--force` é uma exceção operacional manual documentada.
+Os downloads não publicam nesta documentação uma quota contratual. O coletor local limita a uma consulta por série a cada 24 horas, com espaçamento compartilhado de no mínimo 2,1 segundos por host; o workflow público verifica apenas as fontes aprovadas a cada seis horas e não consulta estas quatro séries. HTTP 429/503 respeita Retry-After com adiamento persistido e preservação de cache; erros de formato, série, unidade ou histórico também preservam os dados anteriores. Não há retentativas em laço. `--force` é uma exceção operacional manual documentada.
 
 API v2 EIA: [documentação e cadastro](https://www.eia.gov/opendata/), credencial obrigatória. Não foi necessária para estes downloads, e não foi introduzida dependência dessa chave.
 
@@ -49,10 +49,10 @@ Não foram solicitadas credenciais em chat. A API do GitHub foi usada apenas par
 
 ## Operação e validação
 
-- Downloads EIA integrados ao mesmo pipeline de JSON estático do Pages, sem backend permanente e sem chamadas EIA no navegador. `xlrd==2.0.2` lê os arquivos XLS; dependência instalada no workflow de coleta.
+- Downloads EIA isolados em `backend.energy_validation`, sem inclusão no JSON público ou na coleta de produção. `xlrd==2.0.2` lê os arquivos XLS; a prévia restrita escuta somente em 127.0.0.1 e recebe aviso NÃO PUBLICAR.
 - Históricos válidos anteriores são mesclados por data; revisões upstream prevalecem na mesma data, sem apagar observações antigas fora da janela recebida. Falha mantém dados e informa estado `stale`.
 - Cabeçalhos verificam mercado e unidade; datas inválidas/futuras, valores não finitos e duplicações conflitantes são rejeitados. Preços negativos legítimos não são descartados.
-- Início, fim, quantidade, fonte, licença, frequência, unidade, moeda, última observação e data de coleta ficam no JSON. A interface existente mostra datas e disponibilidade; Brent, WTI e Henry Hub ganham prioridade no resumo inicial. Identidade visual, filtros e gráficos preservados.
-- Testes: suíte Python, suíte Node, sintaxe, validação do JSON, build do Pages e recursos HTTP reais sob `/Markets/`; teste adicional do frontend usa os quatro históricos publicados nas janelas e comparação de gráficos. Nenhuma alegação de inspeção visual em navegador.
+- Início, fim, quantidade, fonte, licença, frequência, unidade, moeda, última observação e data de coleta ficam no JSON. A interface existente mostra datas e disponibilidade; As séries de energia aparecem no resumo somente na prévia local; o resumo público mantém 30 séries aprovadas. Identidade visual, filtros e gráficos preservados.
+- Testes: suíte Python, suíte Node, sintaxe, validação do JSON, build do Pages e recursos HTTP reais sob `/Markets/`; teste adicional do frontend usa os quatro históricos publicados nas janelas e comparação de gráficos. O teste final inclui inspeção real em navegador e capturas mantidas localmente; consulte `final-market-test.md`.
 
-Após revisão e merge manual do PR, o workflow existente publica o site e a coleta diária EIA passa a operar. Estas quatro integrações não requerem ação de cadastro ou configuração de Secrets. Índices, metais e cripto exigem resolver os impedimentos acima antes de ampliar a lista de publicação aprovada.
+O merge manual não libera os quatro históricos: o coletor público e o build os bloqueiam independentemente de credenciais. Para validar localmente, use `python -m backend.energy_validation --force` e `python -m backend.preview_energy`. Novas integrações públicas exigem comprovação específica dos direitos e revisão do bloqueio em alteração separada.

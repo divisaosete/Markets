@@ -26,6 +26,14 @@ Os workflows em .github/workflows incluem coleta a cada seis horas e execução 
 
 ## Testes e documentação
 
+### Energia: validação local, sem autorização de publicação
+
+Brent, WTI, Henry Hub e óleo de aquecimento estão bloqueados no JSON público, no coletor de produção e no backend opcional até comprovar os direitos de redistribuição EIA/Refinitiv-LSEG. O build rejeita observações dessas séries; uma credencial não libera a publicação.
+
+Para testar localmente, instale `requirements.txt`, execute `python -m backend.energy_validation --force` e depois `python -m backend.preview_energy`. Abra `http://127.0.0.1:8081/Markets/`. Essa prévia tem aviso **NÃO PUBLICAR**, escuta somente em `127.0.0.1` e grava dados/relatórios exclusivamente em `var/`, ignorado pelo Git. Não envie essa pasta ao GitHub ou Pages. Sem `--force`, o coletor local respeita 24 horas desde a última coleta bem-sucedida.
+
+O comando normal `python -m backend.preview_pages` usa apenas o pacote público com 30 históricos. Consulte [o teste final](docs/final-market-test.md) para resultados, capturas locais e alternativas de fontes.
+
 Instale requirements.txt e requirements-dev.txt para os testes completos; o coletor e a prévia estáticos usam apenas Python padrão. Execute `python tests/run_checks.py`. Há teste HTTP estático em tests/pages_static_smoke.py, relatórios de coleta real e auditoria de dependências em docs. CI usa Python 3.12 e Node 22. No Python 3.15/Windows, PyYAML pode precisar da instalação pura com a variável PYYAML_FORCE_LIBYAML=0; não é necessário instalar compilador para abrir a beta.
 
 - [Fontes e permissões](FONTES-DE-DADOS.md)

@@ -5,19 +5,18 @@ import {validatePublished,createStaticClient,seriesWindow,comparePublished,hybri
 import {createDirectFx} from '../public/direct-fx.js';
 import {readFileSync} from 'node:fs';
 const now=()=>new Date('2026-10-31T12:00:00Z');
-test('published EIA spot histories work in chart windows and static comparisons',async()=>{
+test('public bundle contains no unapproved energy observations',async()=>{
  const data=validatePublished(JSON.parse(readFileSync(new URL('../public/data/market-data.json',import.meta.url),'utf8')));
- const reference=new Date(data.generated_at);
- const read=createStaticClient({now:()=>reference,fetch:async()=>({ok:true,json:async()=>data})});
- for(const id of ['brent','wti','commodity-29','commodity-31']){
-  const row=(await read(`series?id=${id}&period=MAX`)).series[0];
-  assert.ok(row.points.length>1000);assert.equal(row.provider,'eia');assert.equal(row.currency,'USD');
-  assert.match(row.reference,/spot/);assert.equal(row.latest.date,row.points.at(-1).date);
-  assert.ok(seriesWindow(row,'1A',reference).points.length>100);
+ for(const row of data.series.filter(r=>r.provider==='eia')){
+  assert.deepEqual(row.points,[]);assert.equal(row.latest,null);assert.equal(row.reason,'publication_review');
+  assert.match(row.message,/Refinitiv/);
  }
- const compared=await read('compare?ids=brent,wti&period=1A');assert.equal(compared.comparison.length,2);
- assert.ok(compared.comparison.every(r=>r.points.length>100));
- assert.ok(preferredOverview(data.series).includes('brent'));
+ assert.ok(!preferredOverview(data.series).includes('brent'));
+});
+test('explicit local energy fixtures support windows and comparisons',()=>{
+ const energy=['brent','wti'].map((id,i)=>({id,provider:'eia',category:'commodities',source:'Explicit test fixture, not market data',unit:'USD/barril',currency:'USD',points:[{date:'2026-10-29',value:10+i},{date:'2026-10-30',value:11+i}]}));
+ assert.equal(seriesWindow(energy[0],'1A',now()).points.length,2);
+ assert.equal(comparePublished(energy).length,2);
 });
 function fixture(){return {schema_version:1,generated_at:now().toISOString(),series:ASSETS.map(a=>({...a,status:'unavailable',reason:'license_required',source:'Explicit unit-test fixture',points:[],latest:null})).map(r=>r.id==='usdbrl'?{...r,status:'ok',reason:'available',points:[{date:'2026-10-29',value:5},{date:'2026-10-30',value:6}],latest:{date:'2026-10-30',value:6}}:r)}}
 test('static client works below a repository path without requesting any Python endpoint',async()=>{

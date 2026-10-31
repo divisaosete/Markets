@@ -38,5 +38,5 @@ OVERVIEW=['ibov','sp500','nasdaq','nikkei','brent','wti','gold','usdbrl','bitcoi
 
 # Explicit daily spot markets, never substituted with futures or ETFs.
 from backend.providers.eia import SERIES as EIA_SERIES
-for id, (_, code, label, unit) in EIA_SERIES.items():
-    BY_ID[id].update(provider='eia',code=code,unit=unit,currency='USD',frequency='diária (dias publicados)',reference=label + '; spot, sem contrato futuro',instrument=label)
+for id, (section, code, label, unit) in EIA_SERIES.items():
+    BY_ID[id].update(provider='eia',code=code,unit=unit,currency='USD',frequency='diária (dias publicados)',reference=label + '; spot, sem contrato futuro',instrument=label,source_url=f'https://www.eia.gov/dnav/{section}/hist/{code}.htm')

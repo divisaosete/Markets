@@ -53,8 +53,7 @@ def point(d,v):
 def fetch(a,start,end):
     p=a['provider']; code=a['code']; points=[]; extra={}
     if p=='eia':
-        from backend.providers.eia import fetch as fetch_eia
-        return fetch_eia(a,start,end,request)
+        raise Unavailable('Redistribuição EIA/Refinitiv não confirmada; use somente backend.energy_validation para validação local')
     if p in ('treasury','ecb','boc'):
         from backend.providers import official
         get_text=lambda url:request(url,headers={'Accept':'text/csv' if p=='ecb' else 'application/atom+xml'},output='text')

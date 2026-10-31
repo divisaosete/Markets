@@ -44,7 +44,7 @@ def fetch(a, start, end, request):
     section, code, label, unit = SERIES[a['id']]
     url = f'https://www.eia.gov/dnav/{section}/hist_xls/{code}.xls'
     points = parse_workbook(request(url, output='bytes'), label, start, end)
-    return {'points': points, 'source': 'U.S. Energy Information Administration · EIA',
+    return {'points': points, 'source': 'EIA · dados Refinitiv/LSEG',
             'source_url': f'https://www.eia.gov/dnav/{section}/hist/{code}.htm',
             'unit': unit, 'frequency': 'diária (dias publicados)',
             'reference': label + '; spot, sem contrato futuro', 'instrument': label,

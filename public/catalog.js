@@ -363,7 +363,8 @@ export const ASSETS = [
     "reference": "Europe Brent Spot Price FOB (Dollars per Barrel); spot, sem contrato futuro",
     "currency": "USD",
     "frequency": "diária (dias publicados)",
-    "instrument": "Europe Brent Spot Price FOB (Dollars per Barrel)"
+    "instrument": "Europe Brent Spot Price FOB (Dollars per Barrel)",
+    "source_url": "https://www.eia.gov/dnav/pet/hist/RBRTEd.htm"
   },
   {
     "id": "wti",
@@ -377,7 +378,8 @@ export const ASSETS = [
     "reference": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel); spot, sem contrato futuro",
     "currency": "USD",
     "frequency": "diária (dias publicados)",
-    "instrument": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)"
+    "instrument": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)",
+    "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCd.htm"
   },
   {
     "id": "commodity-29",
@@ -391,7 +393,8 @@ export const ASSETS = [
     "reference": "Henry Hub Natural Gas Spot Price (Dollars per Million Btu); spot, sem contrato futuro",
     "currency": "USD",
     "frequency": "diária (dias publicados)",
-    "instrument": "Henry Hub Natural Gas Spot Price (Dollars per Million Btu)"
+    "instrument": "Henry Hub Natural Gas Spot Price (Dollars per Million Btu)",
+    "source_url": "https://www.eia.gov/dnav/ng/hist/RNGWHHDd.htm"
   },
   {
     "id": "commodity-30",
@@ -416,7 +419,8 @@ export const ASSETS = [
     "reference": "New York Harbor No. 2 Heating Oil Spot Price FOB (Dollars per Gallon); spot, sem contrato futuro",
     "currency": "USD",
     "frequency": "diária (dias publicados)",
-    "instrument": "New York Harbor No. 2 Heating Oil Spot Price FOB (Dollars per Gallon)"
+    "instrument": "New York Harbor No. 2 Heating Oil Spot Price FOB (Dollars per Gallon)",
+    "source_url": "https://www.eia.gov/dnav/pet/hist/EER_EPD2F_PF4_Y35NY_DPGd.htm"
   },
   {
     "id": "gold",
