@@ -2,6 +2,16 @@ export function filterAssets(items,filter='',search=''){
   return items.filter(a=>(!filter||a.region===filter||a.country===filter)&&(!search||a.name.toLocaleLowerCase('pt-BR').includes(search.toLocaleLowerCase('pt-BR'))));
 }
 export function selectionFor(items,current){return items.some(a=>a.id===current)?current:items[0]?.id||''}
+export function navigationState(hash,catalog,sections,period='1A'){
+  const [requested,raw]=hash.replace(/^#/,'').split('/');
+  const section=sections.includes(requested)?requested:'overview';
+  let selected='';try{selected=decodeURIComponent(raw||'')}catch{}
+  const target=catalog.find(a=>a.id===selected);
+  // The destination determines the panel, independent of the previously open tab.
+  const sub=section==='rates'&&target?.category==='yields'?'yields':'rates';
+  if(section==='macro'&&['1D','5D','1M','3M','6M','1A'].includes(period))period='5A';
+  return {section,selected,sub,period};
+}
 export function curveModel(rows,catalog,country){
   const meta=new Map(catalog.map(a=>[a.id,a]));
   const available=rows.filter(s=>meta.get(s.id)?.country===country&&s.points?.length).sort((a,b)=>meta.get(a.id).tenor-meta.get(b.id).tenor);

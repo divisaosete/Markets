@@ -1,9 +1,24 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 import {ASSETS} from '../public/catalog.js';
 import {validatePublished,createStaticClient,seriesWindow,comparePublished,hybridClient,preferredOverview} from '../public/static-data.js';
 import {createDirectFx} from '../public/direct-fx.js';
 const now=()=>new Date('2026-10-31T12:00:00Z');
+test('repository bundle exposes policy rates, annual GDP and every Treasury tenor without FX fallback',async()=>{
+ const data=JSON.parse(readFileSync(new URL('../public/data/market-data.json',import.meta.url),'utf8'));
+ let requests=0;
+ const read=createStaticClient({now:()=>new Date(data.generated_at),dynamicFx:false,fetch:async()=>{requests++;return {ok:true,json:async()=>data}}});
+ const ids=['selic','boc','BRA-NY.GDP.MKTP.CD','yield-Estados Unidos-2','yield-Estados Unidos-5','yield-Estados Unidos-10','yield-Estados Unidos-30'];
+ for(const id of ids){
+  const row=(await read('series?'+new URLSearchParams({id,period:'MAX'}))).series[0];
+  const original=data.series.find(r=>r.id===id);
+  assert.ok(row.points.length>1,id);assert.deepEqual(row.latest,original.latest,id);
+  assert.equal(row.unit,original.unit,id);assert.ok(row.source_url,id);
+ }
+ const gdp=(await read('series?id=BRA-NY.GDP.MKTP.CD&period=5A')).series[0];
+ assert.ok(gdp.points.length>=5);assert.equal(gdp.frequency,'anual');assert.equal(requests,1);
+});
 function fixture(){return {schema_version:1,generated_at:now().toISOString(),series:ASSETS.map(a=>({...a,status:'unavailable',reason:'license_required',source:'Explicit unit-test fixture',points:[],latest:null})).map(r=>r.id==='usdbrl'?{...r,status:'ok',reason:'available',points:[{date:'2026-10-29',value:5},{date:'2026-10-30',value:6}],latest:{date:'2026-10-30',value:6}}:r)}}
 test('static client works below a repository path without requesting any Python endpoint',async()=>{
  const urls=[],read=createStaticClient({dataURL:'https://example.github.io/markets/data/market-data.json',now,fetch:async url=>(urls.push(url),{ok:true,json:async()=>fixture()})});
