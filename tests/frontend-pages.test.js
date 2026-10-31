@@ -3,7 +3,21 @@ import assert from 'node:assert/strict';
 import {ASSETS} from '../public/catalog.js';
 import {validatePublished,createStaticClient,seriesWindow,comparePublished,hybridClient,preferredOverview} from '../public/static-data.js';
 import {createDirectFx} from '../public/direct-fx.js';
+import {readFileSync} from 'node:fs';
 const now=()=>new Date('2026-10-31T12:00:00Z');
+test('public bundle contains no unapproved energy observations',async()=>{
+ const data=validatePublished(JSON.parse(readFileSync(new URL('../public/data/market-data.json',import.meta.url),'utf8')));
+ for(const row of data.series.filter(r=>r.provider==='eia')){
+  assert.deepEqual(row.points,[]);assert.equal(row.latest,null);assert.equal(row.reason,'publication_review');
+  assert.match(row.message,/Refinitiv/);
+ }
+ assert.ok(!preferredOverview(data.series).includes('brent'));
+});
+test('explicit local energy fixtures support windows and comparisons',()=>{
+ const energy=['brent','wti'].map((id,i)=>({id,provider:'eia',category:'commodities',source:'Explicit test fixture, not market data',unit:'USD/barril',currency:'USD',points:[{date:'2026-10-29',value:10+i},{date:'2026-10-30',value:11+i}]}));
+ assert.equal(seriesWindow(energy[0],'1A',now()).points.length,2);
+ assert.equal(comparePublished(energy).length,2);
+});
 function fixture(){return {schema_version:1,generated_at:now().toISOString(),series:ASSETS.map(a=>({...a,status:'unavailable',reason:'license_required',source:'Explicit unit-test fixture',points:[],latest:null})).map(r=>r.id==='usdbrl'?{...r,status:'ok',reason:'available',points:[{date:'2026-10-29',value:5},{date:'2026-10-30',value:6}],latest:{date:'2026-10-30',value:6}}:r)}}
 test('static client works below a repository path without requesting any Python endpoint',async()=>{
  const urls=[],read=createStaticClient({dataURL:'https://example.github.io/markets/data/market-data.json',now,fetch:async url=>(urls.push(url),{ok:true,json:async()=>fixture()})});

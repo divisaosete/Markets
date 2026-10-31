@@ -10,5 +10,7 @@ Cada registro JSON identifica fonte, licença, unidade, referência e coleta. Es
 
 Transformações: datas normalizadas para sua frequência original; seleção de janelas, variações e base 100 calculadas; nenhuma interpolação, expectativa ou observação inventada. Fonte e dados originais prevalecem; estes cálculos não são publicação oficial do provedor.
 
-FRED, CoinGecko, índices e commodities não entram automaticamente na publicação. Chave de API não equivale a licença de redistribuição. Históricos sem autorização permanecem indisponíveis. Não são substituídos por ETFs ou outros instrumentos.
+- **EIA / Refinitiv-LSEG — Brent, WTI, Henry Hub e óleo de aquecimento:** publicação suspensa. As notas oficiais identificam Refinitiv/LSEG como origem dos preços spot. A política geral da EIA ressalva materiais de terceiros; não foi comprovada autorização específica para redistribuição destes históricos. Os arquivos públicos contêm somente os metadados e o motivo da indisponibilidade, sem observações, preços ou última cotação. Downloads e gráficos das quatro séries ficam restritos à validação local em `var/`, fora dos artefatos Pages. Fontes: https://www.eia.gov/dnav/pet/TblDefs/pet_pri_spt_tbldef2.asp e https://www.eia.gov/dnav/ng/TblDefs/ng_pri_fut_tbldef2.asp . Política: https://www.eia.gov/about/copyrights_reuse.php .
+
+FRED, CoinGecko, índices e as demais commodities não entram automaticamente na publicação. Chave de API não equivale a licença de redistribuição. Históricos sem autorização permanecem indisponíveis. Não são substituídos por ETFs ou outros instrumentos.
 Nos pares com base diferente de EUR, a conversão de base/câmbio cruzado é fornecida pelo Frankfurter a partir das referências BCE; não é uma cotação intradiária de execução.

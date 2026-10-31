@@ -21,17 +21,19 @@ FIELDS={'id','name','symbol','category','country','provider','source','source_ur
 def approved(a):return a['provider'] in POLICIES and (a['provider']!='worldbank' or a['code'] in GDP_CODES)
 def empty(a):
     p=a['provider'];policy=POLICIES.get(p)
-    reason='publication_review' if p=='worldbank' and not approved(a) else 'credential_required' if p in ('fred','coingecko') else 'license_required' if p=='licensed' else 'awaiting_sync'
+    reason='publication_review' if p=='eia' or p=='worldbank' and not approved(a) else 'credential_required' if p in ('fred','coingecko') else 'license_required' if p=='licensed' else 'awaiting_sync'
     message={'publication_review':'Redistribuição desta série ainda em revisão para a beta pública.','credential_required':'Coleta em servidor/Actions e revisão dos direitos exigem credencial; nunca inserir chave no navegador.','license_required':'Fonte licenciada e autorização de exibição pública necessárias.','awaiting_sync':'Primeira coleta pública ainda não concluída.'}[reason]
+    if p=='eia':message='Histórico disponível apenas para validação local. Publicação suspensa até confirmar os direitos dos dados Refinitiv/LSEG distribuídos pela EIA.'
     currency=a.get('currency') or (a['code'].split('/')[1] if p=='fx' else 'USD' if a['unit'].startswith('USD') else None)
-    return {'id':a['id'],'name':a['name'],'symbol':a['code'] or a['id'],'category':a['category'],'country':a.get('country',''),'provider':p,'unit':a['unit'],'currency':currency,'frequency':a.get('frequency','conforme fonte'),'reference':a.get('reference',''),'instrument':a.get('instrument',''),'delivery':'static','update_type':'periodic_release' if a['category']=='macro' else 'daily_reference','license':policy[0] if policy and approved(a) else 'Pendente de autorização/revisão','license_url':policy[1] if policy else '', 'source':{'bcb':'Banco Central do Brasil · SGS','fx':'Frankfurter · BCE','worldbank':'World Bank · WDI','ecb':'Banco Central Europeu','boc':'Bank of Canada · Valet','treasury':'US Treasury'}.get(p,p),'source_url':a.get('source_url',''),'attribution':'Fonte indicada por série; New Era Labs não é endossado pelos provedores.','transformations':'Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.','expected_interval_seconds':policy[2] if policy else None,'status':'unavailable','reason':reason,'message':message,'points':[],'latest':None,'synced_at':None}
+    return {'id':a['id'],'name':a['name'],'symbol':a['code'] or a['id'],'category':a['category'],'country':a.get('country',''),'provider':p,'unit':a['unit'],'currency':currency,'frequency':a.get('frequency','conforme fonte'),'reference':a.get('reference',''),'instrument':a.get('instrument',''),'delivery':'static','update_type':'periodic_release' if a['category']=='macro' else 'daily_reference','license':policy[0] if policy and approved(a) else 'Pendente de autorização/revisão','license_url':policy[1] if policy else '', 'source':{'bcb':'Banco Central do Brasil · SGS','fx':'Frankfurter · BCE','worldbank':'World Bank · WDI','ecb':'Banco Central Europeu','boc':'Bank of Canada · Valet','treasury':'US Treasury','eia':'U.S. Energy Information Administration · EIA'}.get(p,p),'source_url':a.get('source_url',''),'attribution':'Fonte indicada por série; New Era Labs não é endossado pelos provedores.','transformations':'Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.','expected_interval_seconds':policy[2] if policy else None,'status':'unavailable','reason':reason,'message':message,'points':[],'latest':None,'synced_at':None}
 
 def validate_row(r):
     if not isinstance(r,dict) or set(r)-FIELDS or r.get('id') not in BY_ID:raise ValueError('Invalid public row')
     points=normalize_points(r.get('points',[]))
     if points!=r['points'] or r.get('latest')!=(points[-1] if points else None):raise ValueError('Invalid public observations')
     if points and not approved(BY_ID[r['id']]):raise ValueError('Unapproved publication')
-    if r['unit']!=BY_ID[r['id']]['unit'] and BY_ID[r['id']]['provider']!='ecb':raise ValueError('Unit mismatch')
+    legacy_empty_eia = BY_ID[r['id']]['provider']=='eia' and not points and r['unit']==''
+    if r['unit']!=BY_ID[r['id']]['unit'] and BY_ID[r['id']]['provider']!='ecb' and not legacy_empty_eia:raise ValueError('Unit mismatch')
     if r.get('delivery')!='static' or r.get('update_type') not in ('daily_reference','periodic_release') or r.get('status') not in ('ok','stale','unavailable'):raise ValueError('Invalid public availability metadata')
     for key in ('source_url','license_url'):
         if r.get(key):
@@ -73,7 +75,8 @@ def collect(output=DEFAULT,fetcher=None,now=None,ids=None,force=False,state_path
     except (OSError,ValueError):state={}
     reports=[];rows=[]
     for a in ASSETS:
-        before=old.get(a['id'],empty(a));r=dict(before)
+        before=old.get(a['id'],empty(a))
+        r=dict(before)
         r['currency']=r.get('currency') or empty(a)['currency']
         if not approved(a) or ids is not None and a['id'] not in ids:rows.append(r);continue
         if not force and now.timestamp()-state.get(a['id'],0)<POLICIES[a['provider']][2]:rows.append(r);continue
@@ -84,7 +87,9 @@ def collect(output=DEFAULT,fetcher=None,now=None,ids=None,force=False,state_path
             data=fetcher(a,start,today);pts=normalize_points(data['points'],today)
             if not pts:raise ValueError('Empty upstream history')
             if a['provider']=='worldbank':pts=normalize_points([{**p,'date':p['date'][:4]} for p in pts],today)
-            r=empty(a);r.update({k:data[k] for k in ('source','source_url','unit','frequency','reference','instrument','max_age_days') if k in data})
+            r=empty(a);r.update({k:data[k] for k in ('source','source_url','unit','frequency','reference','instrument','max_age_days','attribution') if k in data})
+            # Merge valid prior observations; a rolling upstream window must not erase history.
+            pts=normalize_points(list({p['date']:p for p in before['points']+pts}.values()),today)
             r.update(status='ok',reason='available',message='Referência publicada; não é preço em tempo real.',points=pts,latest=pts[-1],window_start=start.isoformat(),window_end=today.isoformat(),synced_at=stamp)
             validate_row(r)
             comparable=lambda v:{k:x for k,x in v.items() if k not in ('synced_at','window_start','window_end')}

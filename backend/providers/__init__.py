@@ -16,7 +16,7 @@ class SameHostRedirect(HTTPRedirectHandler):
         return super().redirect_request(req,fp,code,msg,headers,newurl)
 def request(url,headers=None,output='json'):
     host=urlparse(url).hostname
-    allowed={'api.bcb.gov.br','api.frankfurter.dev','api.coingecko.com','pro-api.coingecko.com','api.worldbank.org','api.stlouisfed.org','home.treasury.gov','data-api.ecb.europa.eu','www.bankofcanada.ca','www.bankofengland.co.uk'}
+    allowed={'www.eia.gov','api.bcb.gov.br','api.frankfurter.dev','api.coingecko.com','pro-api.coingecko.com','api.worldbank.org','api.stlouisfed.org','home.treasury.gov','data-api.ecb.europa.eu','www.bankofcanada.ca','www.bankofengland.co.uk'}
     if urlparse(url).scheme!='https' or host not in allowed:raise Unavailable('Host de dados não autorizado')
     with _lock:
         from backend.cache import Cache
@@ -27,11 +27,11 @@ def request(url,headers=None,output='json'):
         if wait:time.sleep(wait)
     # No URL is taken from an HTTP request. Do not log URLs containing keys.
     try:
-        with build_opener(SameHostRedirect()).open(Request(url,headers={'User-Agent':'NewEraMarkets/1.0','Accept':'application/json',**(headers or {})}),timeout=20) as r:
+        with build_opener(SameHostRedirect()).open(Request(url,headers={'User-Agent':'NewEraMarkets/1.0','Accept':'application/vnd.ms-excel' if output=='bytes' else 'application/json',**(headers or {})}),timeout=20) as r:
             if urlparse(r.geturl()).hostname not in allowed:raise Unavailable('Redirecionamento de fonte não autorizado')
             raw=r.read(12_000_001)
             if len(raw)>12_000_000:raise Unavailable('Resposta excede limite')
-            return raw.decode('utf-8-sig') if output=='text' else json.loads(raw)
+            return raw if output=='bytes' else raw.decode('utf-8-sig') if output=='text' else json.loads(raw)
     except HTTPError as e:
         if e.code not in (429,503):
             e.close()
@@ -52,6 +52,8 @@ def point(d,v):
     return {'date':d,'value':v}
 def fetch(a,start,end):
     p=a['provider']; code=a['code']; points=[]; extra={}
+    if p=='eia':
+        raise Unavailable('Redistribuição EIA/Refinitiv não confirmada; use somente backend.energy_validation para validação local')
     if p in ('treasury','ecb','boc'):
         from backend.providers import official
         get_text=lambda url:request(url,headers={'Accept':'text/csv' if p=='ecb' else 'application/atom+xml'},output='text')
