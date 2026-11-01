@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T01:29:20.259230+00:00",
+  "generated_at": "2026-11-01T19:04:17.208261+00:00",
   "note": "Dados reais de fontes identificadas; atualização periódica, sem garantia de tempo real. Licenças independentes por série.",
   "schema_version": 1,
   "series": [
@@ -53358,7 +53358,7 @@
       "id": "selic",
       "instrument": "Meta Selic",
       "latest": {
-        "date": "2026-10-31",
+        "date": "2026-11-01",
         "value": 13.75
       },
       "license": "ODbL-1.0",
@@ -53366,10 +53366,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Selic meta",
       "points": [
-        {
-          "date": "2021-10-31",
-          "value": 7.75
-        },
         {
           "date": "2021-11-01",
           "value": 7.75
@@ -60673,6 +60669,10 @@
         {
           "date": "2026-10-31",
           "value": 13.75
+        },
+        {
+          "date": "2026-11-01",
+          "value": 13.75
         }
       ],
       "provider": "bcb",
@@ -60682,12 +60682,12 @@
       "source_url": "https://dadosabertos.bcb.gov.br/",
       "status": "ok",
       "symbol": "432",
-      "synced_at": "2026-10-31T11:49:26.044195+00:00",
+      "synced_at": "2026-11-01T19:04:17.208261+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "% a.a.",
       "update_type": "daily_reference",
-      "window_end": "2026-10-31",
-      "window_start": "2021-10-31"
+      "window_end": "2026-11-01",
+      "window_start": "2021-11-01"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
