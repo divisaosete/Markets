@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T01:28:57.749721+00:00",
+  "generated_at": "2026-11-02T19:15:44.456979+00:00",
   "note": "Dados reais de fontes identificadas; atualização periódica, sem garantia de tempo real. Licenças independentes por série.",
   "schema_version": 1,
   "series": [
@@ -1526,8 +1526,8 @@
       "id": "usdbrl",
       "instrument": "",
       "latest": {
-        "date": "2026-10-30",
-        "value": 5.4325
+        "date": "2026-11-02",
+        "value": 5.4378
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -6653,6 +6653,10 @@
         {
           "date": "2026-10-30",
           "value": 5.4325
+        },
+        {
+          "date": "2026-11-02",
+          "value": 5.4378
         }
       ],
       "provider": "fx",
@@ -6662,7 +6666,7 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/BRL",
-      "synced_at": "2026-11-02T01:28:57.749721+00:00",
+      "synced_at": "2026-11-02T19:15:44.456979+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "BRL",
       "update_type": "daily_reference",
@@ -6680,8 +6684,8 @@
       "id": "eurbrl",
       "instrument": "",
       "latest": {
-        "date": "2026-10-30",
-        "value": 6.0692
+        "date": "2026-11-02",
+        "value": 6.099
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -11807,6 +11811,10 @@
         {
           "date": "2026-10-30",
           "value": 6.0692
+        },
+        {
+          "date": "2026-11-02",
+          "value": 6.099
         }
       ],
       "provider": "fx",
@@ -11816,7 +11824,7 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "EUR/BRL",
-      "synced_at": "2026-11-02T01:28:57.749721+00:00",
+      "synced_at": "2026-11-02T19:15:44.456979+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "BRL",
       "update_type": "daily_reference",
@@ -11834,8 +11842,8 @@
       "id": "eurusd",
       "instrument": "",
       "latest": {
-        "date": "2026-10-30",
-        "value": 1.1172
+        "date": "2026-11-02",
+        "value": 1.1216
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -16961,6 +16969,10 @@
         {
           "date": "2026-10-30",
           "value": 1.1172
+        },
+        {
+          "date": "2026-11-02",
+          "value": 1.1216
         }
       ],
       "provider": "fx",
@@ -16970,7 +16982,7 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "EUR/USD",
-      "synced_at": "2026-11-02T01:28:57.749721+00:00",
+      "synced_at": "2026-11-02T19:15:44.456979+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
@@ -16988,8 +17000,8 @@
       "id": "gbpusd",
       "instrument": "",
       "latest": {
-        "date": "2026-10-30",
-        "value": 1.3399
+        "date": "2026-11-02",
+        "value": 1.3419
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -22115,6 +22127,10 @@
         {
           "date": "2026-10-30",
           "value": 1.3399
+        },
+        {
+          "date": "2026-11-02",
+          "value": 1.3419
         }
       ],
       "provider": "fx",
@@ -22124,7 +22140,7 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "GBP/USD",
-      "synced_at": "2026-11-02T01:28:57.749721+00:00",
+      "synced_at": "2026-11-02T19:15:44.456979+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
@@ -22142,8 +22158,8 @@
       "id": "usdjpy",
       "instrument": "",
       "latest": {
-        "date": "2026-10-30",
-        "value": 157.25
+        "date": "2026-11-02",
+        "value": 157.9
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -27269,6 +27285,10 @@
         {
           "date": "2026-10-30",
           "value": 157.25
+        },
+        {
+          "date": "2026-11-02",
+          "value": 157.9
         }
       ],
       "provider": "fx",
@@ -27278,7 +27298,7 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/JPY",
-      "synced_at": "2026-11-02T01:28:57.749721+00:00",
+      "synced_at": "2026-11-02T19:15:44.456979+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "JPY",
       "update_type": "daily_reference",
@@ -27296,8 +27316,8 @@
       "id": "usdcny",
       "instrument": "",
       "latest": {
-        "date": "2026-10-30",
-        "value": 6.6529
+        "date": "2026-11-02",
+        "value": 6.6483
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -32423,6 +32443,10 @@
         {
           "date": "2026-10-30",
           "value": 6.6529
+        },
+        {
+          "date": "2026-11-02",
+          "value": 6.6483
         }
       ],
       "provider": "fx",
@@ -32432,7 +32456,7 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/CNY",
-      "synced_at": "2026-11-02T01:28:57.749721+00:00",
+      "synced_at": "2026-11-02T19:15:44.456979+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CNY",
       "update_type": "daily_reference",
@@ -32450,8 +32474,8 @@
       "id": "usdchf",
       "instrument": "",
       "latest": {
-        "date": "2026-10-30",
-        "value": 0.82295
+        "date": "2026-11-02",
+        "value": 0.81963
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -37577,6 +37601,10 @@
         {
           "date": "2026-10-30",
           "value": 0.82295
+        },
+        {
+          "date": "2026-11-02",
+          "value": 0.81963
         }
       ],
       "provider": "fx",
@@ -37586,7 +37614,7 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/CHF",
-      "synced_at": "2026-11-02T01:28:57.749721+00:00",
+      "synced_at": "2026-11-02T19:15:44.456979+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CHF",
       "update_type": "daily_reference",
@@ -37604,8 +37632,8 @@
       "id": "audusd",
       "instrument": "",
       "latest": {
-        "date": "2026-10-30",
-        "value": 0.70246
+        "date": "2026-11-02",
+        "value": 0.70082
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -42731,6 +42759,10 @@
         {
           "date": "2026-10-30",
           "value": 0.70246
+        },
+        {
+          "date": "2026-11-02",
+          "value": 0.70082
         }
       ],
       "provider": "fx",
@@ -42740,7 +42772,7 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "AUD/USD",
-      "synced_at": "2026-11-02T01:28:57.749721+00:00",
+      "synced_at": "2026-11-02T19:15:44.456979+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
@@ -42758,8 +42790,8 @@
       "id": "usdcad",
       "instrument": "",
       "latest": {
-        "date": "2026-10-30",
-        "value": 1.3969
+        "date": "2026-11-02",
+        "value": 1.3974
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -47885,6 +47917,10 @@
         {
           "date": "2026-10-30",
           "value": 1.3969
+        },
+        {
+          "date": "2026-11-02",
+          "value": 1.3974
         }
       ],
       "provider": "fx",
@@ -47894,7 +47930,7 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/CAD",
-      "synced_at": "2026-11-02T01:28:57.749721+00:00",
+      "synced_at": "2026-11-02T19:15:44.456979+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CAD",
       "update_type": "daily_reference",
@@ -47912,8 +47948,8 @@
       "id": "usdmxn",
       "instrument": "",
       "latest": {
-        "date": "2026-10-30",
-        "value": 18.9077
+        "date": "2026-11-02",
+        "value": 18.72
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -53039,6 +53075,10 @@
         {
           "date": "2026-10-30",
           "value": 18.9077
+        },
+        {
+          "date": "2026-11-02",
+          "value": 18.72
         }
       ],
       "provider": "fx",
@@ -53048,7 +53088,7 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/MXN",
-      "synced_at": "2026-11-02T01:28:57.749721+00:00",
+      "synced_at": "2026-11-02T19:15:44.456979+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "MXN",
       "update_type": "daily_reference",
@@ -53318,7 +53358,7 @@
       "id": "selic",
       "instrument": "Meta Selic",
       "latest": {
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "value": 13.75
       },
       "license": "ODbL-1.0",
@@ -53326,10 +53366,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Selic meta",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 7.75
-        },
         {
           "date": "2021-11-02",
           "value": 7.75
@@ -60633,6 +60669,10 @@
         {
           "date": "2026-11-01",
           "value": 13.75
+        },
+        {
+          "date": "2026-11-02",
+          "value": 13.75
         }
       ],
       "provider": "bcb",
@@ -60642,12 +60682,12 @@
       "source_url": "https://dadosabertos.bcb.gov.br/",
       "status": "ok",
       "symbol": "432",
-      "synced_at": "2026-11-01T19:04:17.208261+00:00",
+      "synced_at": "2026-11-02T19:15:44.456979+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "% a.a.",
       "update_type": "daily_reference",
-      "window_end": "2026-11-01",
-      "window_start": "2021-11-01"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -60688,7 +60728,7 @@
       "id": "ecb",
       "instrument": "Taxa da facilidade permanente de depósito",
       "latest": {
-        "date": "2026-10-31",
+        "date": "2026-11-02",
         "value": 2.5
       },
       "license": "ECB reuse with attribution",
@@ -101360,6 +101400,14 @@
         {
           "date": "2026-10-31",
           "value": 2.5
+        },
+        {
+          "date": "2026-11-01",
+          "value": 2.5
+        },
+        {
+          "date": "2026-11-02",
+          "value": 2.5
         }
       ],
       "provider": "ecb",
@@ -101369,11 +101417,11 @@
       "source_url": "https://data.ecb.europa.eu/data/datasets/FM/FM.D.U2.EUR.4F.KR.DFR.LEV",
       "status": "ok",
       "symbol": "FM.D.U2.EUR.4F.KR.DFR.LEV",
-      "synced_at": "2026-10-31T19:04:03.891074+00:00",
+      "synced_at": "2026-11-02T19:15:44.456979+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "% a.a.",
       "update_type": "daily_reference",
-      "window_end": "2026-10-31",
+      "window_end": "2026-11-02",
       "window_start": "1999-01-01"
     },
     {
@@ -101471,7 +101519,7 @@
       "id": "boc",
       "instrument": "Target for the overnight rate",
       "latest": {
-        "date": "2026-10-29",
+        "date": "2026-10-30",
         "value": 2.5
       },
       "license": "Bank of Canada reproduction terms",
@@ -101479,10 +101527,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Bank of Canada",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 0.25
-        },
         {
           "date": "2021-11-02",
           "value": 0.25
@@ -106646,6 +106690,10 @@
         {
           "date": "2026-10-29",
           "value": 2.5
+        },
+        {
+          "date": "2026-10-30",
+          "value": 2.5
         }
       ],
       "provider": "boc",
@@ -106655,12 +106703,12 @@
       "source_url": "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/",
       "status": "ok",
       "symbol": "V39079",
-      "synced_at": "2026-10-31T11:49:26.044195+00:00",
+      "synced_at": "2026-11-02T19:15:44.456979+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "%",
       "update_type": "daily_reference",
-      "window_end": "2026-10-31",
-      "window_start": "2021-10-31"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
