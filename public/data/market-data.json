@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T19:04:17.208261+00:00",
+  "generated_at": "2026-11-02T01:28:57.749721+00:00",
   "note": "Dados reais de fontes identificadas; atualização periódica, sem garantia de tempo real. Licenças independentes por série.",
   "schema_version": 1,
   "series": [
@@ -1534,10 +1534,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/BRL",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 5.6509
-        },
         {
           "date": "2021-11-02",
           "value": 5.6802
@@ -6666,12 +6662,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/BRL",
-      "synced_at": "2026-11-01T01:29:20.259230+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "BRL",
       "update_type": "daily_reference",
-      "window_end": "2026-11-01",
-      "window_start": "2021-11-01"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -6692,10 +6688,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "EUR/BRL",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 6.5426
-        },
         {
           "date": "2021-11-02",
           "value": 6.5907
@@ -11824,12 +11816,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "EUR/BRL",
-      "synced_at": "2026-11-01T01:29:20.259230+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "BRL",
       "update_type": "daily_reference",
-      "window_end": "2026-11-01",
-      "window_start": "2021-11-01"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -11850,10 +11842,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "EUR/USD",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 1.1578
-        },
         {
           "date": "2021-11-02",
           "value": 1.1603
@@ -16982,12 +16970,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "EUR/USD",
-      "synced_at": "2026-11-01T01:29:20.259230+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
-      "window_end": "2026-11-01",
-      "window_start": "2021-11-01"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -17008,10 +16996,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "GBP/USD",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 1.369
-        },
         {
           "date": "2021-11-02",
           "value": 1.3658
@@ -22140,12 +22124,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "GBP/USD",
-      "synced_at": "2026-11-01T01:29:20.259230+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
-      "window_end": "2026-11-01",
-      "window_start": "2021-11-01"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -22166,10 +22150,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/JPY",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 114.17
-        },
         {
           "date": "2021-11-02",
           "value": 113.79
@@ -27298,12 +27278,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/JPY",
-      "synced_at": "2026-11-01T01:29:20.259230+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "JPY",
       "update_type": "daily_reference",
-      "window_end": "2026-11-01",
-      "window_start": "2021-11-01"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -27324,10 +27304,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/CNY",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 6.3981
-        },
         {
           "date": "2021-11-02",
           "value": 6.3983
@@ -32456,12 +32432,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/CNY",
-      "synced_at": "2026-11-01T01:29:20.259230+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CNY",
       "update_type": "daily_reference",
-      "window_end": "2026-11-01",
-      "window_start": "2021-11-01"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -32482,10 +32458,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/CHF",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 0.91225
-        },
         {
           "date": "2021-11-02",
           "value": 0.91304
@@ -37614,12 +37586,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/CHF",
-      "synced_at": "2026-11-01T01:29:20.259230+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CHF",
       "update_type": "daily_reference",
-      "window_end": "2026-11-01",
-      "window_start": "2021-11-01"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -37640,10 +37612,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "AUD/USD",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 0.75182
-        },
         {
           "date": "2021-11-02",
           "value": 0.74646
@@ -42772,12 +42740,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "AUD/USD",
-      "synced_at": "2026-11-01T01:29:20.259230+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
-      "window_end": "2026-11-01",
-      "window_start": "2021-11-01"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -42798,10 +42766,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/CAD",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 1.2373
-        },
         {
           "date": "2021-11-02",
           "value": 1.2401
@@ -47930,12 +47894,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/CAD",
-      "synced_at": "2026-11-01T01:29:20.259230+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CAD",
       "update_type": "daily_reference",
-      "window_end": "2026-11-01",
-      "window_start": "2021-11-01"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -47956,10 +47920,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/MXN",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 20.677
-        },
         {
           "date": "2021-11-02",
           "value": 20.747
@@ -53088,12 +53048,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/MXN",
-      "synced_at": "2026-11-01T01:29:20.259230+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "MXN",
       "update_type": "daily_reference",
-      "window_end": "2026-11-01",
-      "window_start": "2021-11-01"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -112014,10 +111974,6 @@
       "name": "Estados Unidos · 2 anos",
       "points": [
         {
-          "date": "2021-11-01",
-          "value": 0.5
-        },
-        {
           "date": "2021-11-02",
           "value": 0.46
         },
@@ -117017,12 +116973,12 @@
       "source_url": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
       "status": "ok",
       "symbol": "BC_2YEAR",
-      "synced_at": "2026-10-31T11:49:26.044195+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "%",
       "update_type": "daily_reference",
-      "window_end": "2026-10-31",
-      "window_start": "2021-10-31"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -117043,10 +116999,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Estados Unidos · 5 anos",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 1.2
-        },
         {
           "date": "2021-11-02",
           "value": 1.15
@@ -122047,12 +121999,12 @@
       "source_url": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
       "status": "ok",
       "symbol": "BC_5YEAR",
-      "synced_at": "2026-10-31T11:49:26.044195+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "%",
       "update_type": "daily_reference",
-      "window_end": "2026-10-31",
-      "window_start": "2021-10-31"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -122073,10 +122025,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Estados Unidos · 10 anos",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 1.58
-        },
         {
           "date": "2021-11-02",
           "value": 1.56
@@ -127077,12 +127025,12 @@
       "source_url": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
       "status": "ok",
       "symbol": "BC_10YEAR",
-      "synced_at": "2026-10-31T11:49:26.044195+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "%",
       "update_type": "daily_reference",
-      "window_end": "2026-10-31",
-      "window_start": "2021-10-31"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -127103,10 +127051,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Estados Unidos · 30 anos",
       "points": [
-        {
-          "date": "2021-11-01",
-          "value": 1.98
-        },
         {
           "date": "2021-11-02",
           "value": 1.96
@@ -132107,12 +132051,12 @@
       "source_url": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
       "status": "ok",
       "symbol": "BC_30YEAR",
-      "synced_at": "2026-10-31T11:49:26.044195+00:00",
+      "synced_at": "2026-11-02T01:28:57.749721+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "%",
       "update_type": "daily_reference",
-      "window_end": "2026-10-31",
-      "window_start": "2021-10-31"
+      "window_end": "2026-11-02",
+      "window_start": "2021-11-02"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
