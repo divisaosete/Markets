@@ -1,9 +1,28 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {Chart,xRatio,nearestDate,hasOHLC} from '../public/chart.js';
-import {filterAssets,selectionFor,curveModel,variation,futureEvents} from '../public/analytics.js';
+import {filterAssets,selectionFor,navigationState,curveModel,variation,futureEvents} from '../public/analytics.js';
 import {Poller} from '../public/polling.js';
 import {createApiClient} from '../public/data.js';
+import {ASSETS} from '../public/catalog.js';
+
+test('Treasury then Selic or Canada links select the requested monetary instrument',()=>{
+ const sections=['overview','rates','macro'];
+ for(const [id,sub] of [['yield-Estados Unidos-10','yields'],['selic','rates'],['boc','rates']]){
+  const route=navigationState('#rates/'+encodeURIComponent(id),ASSETS,sections);
+  assert.equal(route.sub,sub);
+  assert.equal(selectionFor(ASSETS.filter(a=>a.category===route.sub),route.selected),id);
+ }
+ assert.equal(navigationState('#rates',ASSETS,sections).sub,'rates');
+});
+test('macro links preserve annual visibility and malformed identifiers do not break navigation',()=>{
+ const route=navigationState('#macro/BRA-NY.GDP.MKTP.CD',ASSETS,['overview','macro'],'1D');
+ assert.equal(route.period,'5A');assert.equal(route.selected,'BRA-NY.GDP.MKTP.CD');
+ assert.equal(navigationState('#macro/BRA-NY.GDP.MKTP.CD',ASSETS,['overview','macro'],'1A').period,'5A');
+ assert.equal(navigationState('#macro/BRA-NY.GDP.MKTP.CD',ASSETS,['overview','macro'],'MAX').period,'MAX');
+ assert.equal(navigationState('#rates/%INVALID',ASSETS,['overview','rates']).selected,'');
+ assert.equal(navigationState('#unknown',ASSETS,['overview','rates']).section,'overview');
+});
 test('regional filter updates graph selection and handles no matches',()=>{const items=[{id:'us',country:'US',region:'Américas',name:'S&P'},{id:'de',country:'DE',region:'Europa',name:'DAX'}];assert.equal(selectionFor(filterAssets(items,'Europa'),'us'),'de');assert.equal(selectionFor(filterAssets(items,'','missing'),'us'),'')});
 test('tooltip uses elapsed time with irregular dates',()=>{const dates=['2025-01-01','2025-01-02','2025-12-31'];assert.ok(xRatio(dates[1],dates)<.01);assert.equal(nearestDate(.02,dates),'2025-01-02')});
 test('curve and 10Y minus 2Y use latest common observations',()=>{const catalog=[{id:'2',country:'US',tenor:2},{id:'10',country:'US',tenor:10}];const rows=[{id:'2',points:[{date:'2025-01-01',value:4},{date:'2025-01-02',value:4.2}]},{id:'10',points:[{date:'2025-01-01',value:4.5}]}];const m=curveModel(rows,catalog,'US');assert.equal(m.date,'2025-01-01');assert.equal(m.spread,.5);assert.equal(m.points.length,2);assert.equal(curveModel(rows,catalog,'BR').points.length,0)});
