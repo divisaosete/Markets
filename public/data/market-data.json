@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T19:17:29.555089+00:00",
+  "generated_at": "2026-11-06T01:31:31.875801+00:00",
   "note": "Dados reais de fontes identificadas; atualização periódica, sem garantia de tempo real. Licenças independentes por série.",
   "schema_version": 1,
   "series": [
@@ -53358,7 +53358,7 @@
       "id": "selic",
       "instrument": "Meta Selic",
       "latest": {
-        "date": "2026-11-05",
+        "date": "2026-11-06",
         "value": 13.75
       },
       "license": "ODbL-1.0",
@@ -53366,10 +53366,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Selic meta",
       "points": [
-        {
-          "date": "2021-11-05",
-          "value": 7.75
-        },
         {
           "date": "2021-11-06",
           "value": 7.75
@@ -60673,6 +60669,10 @@
         {
           "date": "2026-11-05",
           "value": 13.75
+        },
+        {
+          "date": "2026-11-06",
+          "value": 13.75
         }
       ],
       "provider": "bcb",
@@ -60682,12 +60682,12 @@
       "source_url": "https://dadosabertos.bcb.gov.br/",
       "status": "ok",
       "symbol": "432",
-      "synced_at": "2026-11-05T01:29:49.662879+00:00",
+      "synced_at": "2026-11-06T01:31:31.875801+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "% a.a.",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -60728,13 +60728,13 @@
       "id": "ecb",
       "instrument": "Taxa da facilidade permanente de depósito",
       "latest": {
-        "date": "2026-11-04",
+        "date": "2026-11-06",
         "value": 2.5
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
       "max_age_days": 36525,
-      "message": "Último histórico válido preservado após falha da fonte.",
+      "message": "Referência publicada; não é preço em tempo real.",
       "name": "BCE",
       "points": [
         {
@@ -101416,20 +101416,28 @@
         {
           "date": "2026-11-04",
           "value": 2.5
+        },
+        {
+          "date": "2026-11-05",
+          "value": 2.5
+        },
+        {
+          "date": "2026-11-06",
+          "value": 2.5
         }
       ],
       "provider": "ecb",
-      "reason": "cached_after_failure",
+      "reason": "available",
       "reference": "policy_change",
       "source": "Banco Central Europeu · Data API",
       "source_url": "https://data.ecb.europa.eu/data/datasets/FM/FM.D.U2.EUR.4F.KR.DFR.LEV",
-      "status": "stale",
+      "status": "ok",
       "symbol": "FM.D.U2.EUR.4F.KR.DFR.LEV",
-      "synced_at": "2026-11-04T01:26:57.077093+00:00",
+      "synced_at": "2026-11-06T01:31:31.875801+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "% a.a.",
       "update_type": "daily_reference",
-      "window_end": "2026-11-04",
+      "window_end": "2026-11-06",
       "window_start": "1999-01-01"
     },
     {
@@ -101527,7 +101535,7 @@
       "id": "boc",
       "instrument": "Target for the overnight rate",
       "latest": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "value": 2.5
       },
       "license": "Bank of Canada reproduction terms",
@@ -101535,10 +101543,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Bank of Canada",
       "points": [
-        {
-          "date": "2021-11-05",
-          "value": 0.25
-        },
         {
           "date": "2021-11-08",
           "value": 0.25
@@ -106698,6 +106702,10 @@
         {
           "date": "2026-11-03",
           "value": 2.5
+        },
+        {
+          "date": "2026-11-04",
+          "value": 2.5
         }
       ],
       "provider": "boc",
@@ -106707,12 +106715,12 @@
       "source_url": "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/",
       "status": "ok",
       "symbol": "V39079",
-      "synced_at": "2026-11-05T01:29:49.662879+00:00",
+      "synced_at": "2026-11-06T01:31:31.875801+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "%",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -112017,18 +112025,14 @@
       "id": "yield-Estados Unidos-2",
       "instrument": "",
       "latest": {
-        "date": "2026-11-04",
-        "value": 4.58
+        "date": "2026-11-05",
+        "value": 4.46
       },
       "license": "US government data; attribution",
       "license_url": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Estados Unidos · 2 anos",
       "points": [
-        {
-          "date": "2021-11-05",
-          "value": 0.39
-        },
         {
           "date": "2021-11-08",
           "value": 0.45
@@ -117016,6 +117020,10 @@
         {
           "date": "2026-11-04",
           "value": 4.58
+        },
+        {
+          "date": "2026-11-05",
+          "value": 4.46
         }
       ],
       "provider": "treasury",
@@ -117025,12 +117033,12 @@
       "source_url": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
       "status": "ok",
       "symbol": "BC_2YEAR",
-      "synced_at": "2026-11-05T01:29:49.662879+00:00",
+      "synced_at": "2026-11-06T01:31:31.875801+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "%",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -117043,18 +117051,14 @@
       "id": "yield-Estados Unidos-5",
       "instrument": "",
       "latest": {
-        "date": "2026-11-04",
-        "value": 4.69
+        "date": "2026-11-05",
+        "value": 4.59
       },
       "license": "US government data; attribution",
       "license_url": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Estados Unidos · 5 anos",
       "points": [
-        {
-          "date": "2021-11-05",
-          "value": 1.04
-        },
         {
           "date": "2021-11-08",
           "value": 1.13
@@ -122042,6 +122046,10 @@
         {
           "date": "2026-11-04",
           "value": 4.69
+        },
+        {
+          "date": "2026-11-05",
+          "value": 4.59
         }
       ],
       "provider": "treasury",
@@ -122051,12 +122059,12 @@
       "source_url": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
       "status": "ok",
       "symbol": "BC_5YEAR",
-      "synced_at": "2026-11-05T01:29:49.662879+00:00",
+      "synced_at": "2026-11-06T01:31:31.875801+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "%",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -122069,18 +122077,14 @@
       "id": "yield-Estados Unidos-10",
       "instrument": "",
       "latest": {
-        "date": "2026-11-04",
-        "value": 4.9
+        "date": "2026-11-05",
+        "value": 4.84
       },
       "license": "US government data; attribution",
       "license_url": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Estados Unidos · 10 anos",
       "points": [
-        {
-          "date": "2021-11-05",
-          "value": 1.45
-        },
         {
           "date": "2021-11-08",
           "value": 1.51
@@ -127068,6 +127072,10 @@
         {
           "date": "2026-11-04",
           "value": 4.9
+        },
+        {
+          "date": "2026-11-05",
+          "value": 4.84
         }
       ],
       "provider": "treasury",
@@ -127077,12 +127085,12 @@
       "source_url": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
       "status": "ok",
       "symbol": "BC_10YEAR",
-      "synced_at": "2026-11-05T01:29:49.662879+00:00",
+      "synced_at": "2026-11-06T01:31:31.875801+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "%",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -127095,18 +127103,14 @@
       "id": "yield-Estados Unidos-30",
       "instrument": "",
       "latest": {
-        "date": "2026-11-04",
-        "value": 5.28
+        "date": "2026-11-05",
+        "value": 5.25
       },
       "license": "US government data; attribution",
       "license_url": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Estados Unidos · 30 anos",
       "points": [
-        {
-          "date": "2021-11-05",
-          "value": 1.87
-        },
         {
           "date": "2021-11-08",
           "value": 1.89
@@ -132094,6 +132098,10 @@
         {
           "date": "2026-11-04",
           "value": 5.28
+        },
+        {
+          "date": "2026-11-05",
+          "value": 5.25
         }
       ],
       "provider": "treasury",
@@ -132103,12 +132111,12 @@
       "source_url": "https://home.treasury.gov/treasury-daily-interest-rate-xml-feed",
       "status": "ok",
       "symbol": "BC_30YEAR",
-      "synced_at": "2026-11-05T01:29:49.662879+00:00",
+      "synced_at": "2026-11-06T01:31:31.875801+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "%",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
