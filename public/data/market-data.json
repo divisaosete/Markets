@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T01:31:31.875801+00:00",
+  "generated_at": "2026-11-06T19:15:41.034509+00:00",
   "note": "Dados reais de fontes identificadas; atualização periódica, sem garantia de tempo real. Licenças independentes por série.",
   "schema_version": 1,
   "series": [
@@ -1526,8 +1526,8 @@
       "id": "usdbrl",
       "instrument": "",
       "latest": {
-        "date": "2026-11-05",
-        "value": 5.4664
+        "date": "2026-11-06",
+        "value": 5.5037
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -6657,6 +6657,10 @@
         {
           "date": "2026-11-05",
           "value": 5.4664
+        },
+        {
+          "date": "2026-11-06",
+          "value": 5.5037
         }
       ],
       "provider": "fx",
@@ -6666,12 +6670,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/BRL",
-      "synced_at": "2026-11-05T19:17:29.555089+00:00",
+      "synced_at": "2026-11-06T19:15:41.034509+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "BRL",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -6684,8 +6688,8 @@
       "id": "eurbrl",
       "instrument": "",
       "latest": {
-        "date": "2026-11-05",
-        "value": 6.1355
+        "date": "2026-11-06",
+        "value": 6.1449
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -11815,6 +11819,10 @@
         {
           "date": "2026-11-05",
           "value": 6.1355
+        },
+        {
+          "date": "2026-11-06",
+          "value": 6.1449
         }
       ],
       "provider": "fx",
@@ -11824,12 +11832,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "EUR/BRL",
-      "synced_at": "2026-11-05T19:17:29.555089+00:00",
+      "synced_at": "2026-11-06T19:15:41.034509+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "BRL",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -11842,8 +11850,8 @@
       "id": "eurusd",
       "instrument": "",
       "latest": {
-        "date": "2026-11-05",
-        "value": 1.1224
+        "date": "2026-11-06",
+        "value": 1.1165
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -16973,6 +16981,10 @@
         {
           "date": "2026-11-05",
           "value": 1.1224
+        },
+        {
+          "date": "2026-11-06",
+          "value": 1.1165
         }
       ],
       "provider": "fx",
@@ -16982,12 +16994,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "EUR/USD",
-      "synced_at": "2026-11-05T19:17:29.555089+00:00",
+      "synced_at": "2026-11-06T19:15:41.034509+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -17000,8 +17012,8 @@
       "id": "gbpusd",
       "instrument": "",
       "latest": {
-        "date": "2026-11-05",
-        "value": 1.3459
+        "date": "2026-11-06",
+        "value": 1.3385
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -22131,6 +22143,10 @@
         {
           "date": "2026-11-05",
           "value": 1.3459
+        },
+        {
+          "date": "2026-11-06",
+          "value": 1.3385
         }
       ],
       "provider": "fx",
@@ -22140,12 +22156,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "GBP/USD",
-      "synced_at": "2026-11-05T19:17:29.555089+00:00",
+      "synced_at": "2026-11-06T19:15:41.034509+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -22158,8 +22174,8 @@
       "id": "usdjpy",
       "instrument": "",
       "latest": {
-        "date": "2026-11-05",
-        "value": 158.46
+        "date": "2026-11-06",
+        "value": 158.33
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -27289,6 +27305,10 @@
         {
           "date": "2026-11-05",
           "value": 158.46
+        },
+        {
+          "date": "2026-11-06",
+          "value": 158.33
         }
       ],
       "provider": "fx",
@@ -27298,12 +27318,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/JPY",
-      "synced_at": "2026-11-05T19:17:29.555089+00:00",
+      "synced_at": "2026-11-06T19:15:41.034509+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "JPY",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -27316,8 +27336,8 @@
       "id": "usdcny",
       "instrument": "",
       "latest": {
-        "date": "2026-11-05",
-        "value": 6.6684
+        "date": "2026-11-06",
+        "value": 6.6713
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -32447,6 +32467,10 @@
         {
           "date": "2026-11-05",
           "value": 6.6684
+        },
+        {
+          "date": "2026-11-06",
+          "value": 6.6713
         }
       ],
       "provider": "fx",
@@ -32456,12 +32480,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/CNY",
-      "synced_at": "2026-11-05T19:17:29.555089+00:00",
+      "synced_at": "2026-11-06T19:15:41.034509+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CNY",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -32474,8 +32498,8 @@
       "id": "usdchf",
       "instrument": "",
       "latest": {
-        "date": "2026-11-05",
-        "value": 0.81789
+        "date": "2026-11-06",
+        "value": 0.8189
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -37605,6 +37629,10 @@
         {
           "date": "2026-11-05",
           "value": 0.81789
+        },
+        {
+          "date": "2026-11-06",
+          "value": 0.8189
         }
       ],
       "provider": "fx",
@@ -37614,12 +37642,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/CHF",
-      "synced_at": "2026-11-05T19:17:29.555089+00:00",
+      "synced_at": "2026-11-06T19:15:41.034509+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CHF",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -37632,8 +37660,8 @@
       "id": "audusd",
       "instrument": "",
       "latest": {
-        "date": "2026-11-05",
-        "value": 0.70006
+        "date": "2026-11-06",
+        "value": 0.68708
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -42763,6 +42791,10 @@
         {
           "date": "2026-11-05",
           "value": 0.70006
+        },
+        {
+          "date": "2026-11-06",
+          "value": 0.68708
         }
       ],
       "provider": "fx",
@@ -42772,12 +42804,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "AUD/USD",
-      "synced_at": "2026-11-05T19:17:29.555089+00:00",
+      "synced_at": "2026-11-06T19:15:41.034509+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -42790,8 +42822,8 @@
       "id": "usdcad",
       "instrument": "",
       "latest": {
-        "date": "2026-11-05",
-        "value": 1.3966
+        "date": "2026-11-06",
+        "value": 1.4066
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -47921,6 +47953,10 @@
         {
           "date": "2026-11-05",
           "value": 1.3966
+        },
+        {
+          "date": "2026-11-06",
+          "value": 1.4066
         }
       ],
       "provider": "fx",
@@ -47930,12 +47966,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/CAD",
-      "synced_at": "2026-11-05T19:17:29.555089+00:00",
+      "synced_at": "2026-11-06T19:15:41.034509+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CAD",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -47948,8 +47984,8 @@
       "id": "usdmxn",
       "instrument": "",
       "latest": {
-        "date": "2026-11-05",
-        "value": 18.5901
+        "date": "2026-11-06",
+        "value": 18.7038
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -53079,6 +53115,10 @@
         {
           "date": "2026-11-05",
           "value": 18.5901
+        },
+        {
+          "date": "2026-11-06",
+          "value": 18.7038
         }
       ],
       "provider": "fx",
@@ -53088,12 +53128,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/MXN",
-      "synced_at": "2026-11-05T19:17:29.555089+00:00",
+      "synced_at": "2026-11-06T19:15:41.034509+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "MXN",
       "update_type": "daily_reference",
-      "window_end": "2026-11-05",
-      "window_start": "2021-11-05"
+      "window_end": "2026-11-06",
+      "window_start": "2021-11-06"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
