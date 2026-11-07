@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T07:24:01.416780+00:00",
+  "generated_at": "2026-11-07T19:06:11.601729+00:00",
   "note": "Dados reais de fontes identificadas; atualização periódica, sem garantia de tempo real. Licenças independentes por série.",
   "schema_version": 1,
   "series": [
@@ -110614,7 +110614,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Último histórico válido preservado após falha da fonte.",
+      "message": "Referência publicada; não é preço em tempo real.",
       "name": "PIB",
       "points": [
         {
@@ -110883,17 +110883,17 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "cached_after_failure",
+      "reason": "available",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
-      "status": "stale",
+      "status": "ok",
       "symbol": "NY.GDP.MKTP.CD",
-      "synced_at": "2026-10-31T11:49:26.044195+00:00",
+      "synced_at": "2026-11-07T19:06:11.601729+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD correntes",
       "update_type": "periodic_release",
-      "window_end": "2026-10-31",
+      "window_end": "2026-11-07",
       "window_start": "1960-01-01"
     },
     {
@@ -111346,7 +111346,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "PIB",
       "points": [
         {
@@ -111615,11 +111615,11 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
-      "status": "ok",
+      "status": "stale",
       "symbol": "NY.GDP.MKTP.CD",
       "synced_at": "2026-10-31T11:49:26.044195+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
