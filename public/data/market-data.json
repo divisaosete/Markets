@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T01:26:26.309371+00:00",
+  "generated_at": "2026-11-15T01:30:02.519701+00:00",
   "note": "Dados reais de fontes identificadas; atualização periódica, sem garantia de tempo real. Licenças independentes por série.",
   "schema_version": 1,
   "series": [
@@ -1534,10 +1534,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/BRL",
       "points": [
-        {
-          "date": "2021-11-12",
-          "value": 5.4072
-        },
         {
           "date": "2021-11-15",
           "value": 5.4577
@@ -6670,12 +6666,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/BRL",
-      "synced_at": "2026-11-13T19:17:33.978755+00:00",
+      "synced_at": "2026-11-15T01:30:02.519701+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "BRL",
       "update_type": "daily_reference",
-      "window_end": "2026-11-13",
-      "window_start": "2021-11-13"
+      "window_end": "2026-11-15",
+      "window_start": "2021-11-15"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -6696,10 +6692,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "EUR/BRL",
       "points": [
-        {
-          "date": "2021-11-12",
-          "value": 6.1902
-        },
         {
           "date": "2021-11-15",
           "value": 6.2458
@@ -11832,12 +11824,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "EUR/BRL",
-      "synced_at": "2026-11-13T19:17:33.978755+00:00",
+      "synced_at": "2026-11-15T01:30:02.519701+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "BRL",
       "update_type": "daily_reference",
-      "window_end": "2026-11-13",
-      "window_start": "2021-11-13"
+      "window_end": "2026-11-15",
+      "window_start": "2021-11-15"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -11858,10 +11850,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "EUR/USD",
       "points": [
-        {
-          "date": "2021-11-12",
-          "value": 1.1448
-        },
         {
           "date": "2021-11-15",
           "value": 1.1444
@@ -16994,12 +16982,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "EUR/USD",
-      "synced_at": "2026-11-13T19:17:33.978755+00:00",
+      "synced_at": "2026-11-15T01:30:02.519701+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
-      "window_end": "2026-11-13",
-      "window_start": "2021-11-13"
+      "window_end": "2026-11-15",
+      "window_start": "2021-11-15"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -17020,10 +17008,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "GBP/USD",
       "points": [
-        {
-          "date": "2021-11-12",
-          "value": 1.3389
-        },
         {
           "date": "2021-11-15",
           "value": 1.3437
@@ -22156,12 +22140,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "GBP/USD",
-      "synced_at": "2026-11-13T19:17:33.978755+00:00",
+      "synced_at": "2026-11-15T01:30:02.519701+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
-      "window_end": "2026-11-13",
-      "window_start": "2021-11-13"
+      "window_end": "2026-11-15",
+      "window_start": "2021-11-15"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -22182,10 +22166,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/JPY",
       "points": [
-        {
-          "date": "2021-11-12",
-          "value": 113.99
-        },
         {
           "date": "2021-11-15",
           "value": 113.88
@@ -27318,12 +27298,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/JPY",
-      "synced_at": "2026-11-13T19:17:33.978755+00:00",
+      "synced_at": "2026-11-15T01:30:02.519701+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "JPY",
       "update_type": "daily_reference",
-      "window_end": "2026-11-13",
-      "window_start": "2021-11-13"
+      "window_end": "2026-11-15",
+      "window_start": "2021-11-15"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -27344,10 +27324,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/CNY",
       "points": [
-        {
-          "date": "2021-11-12",
-          "value": 6.3808
-        },
         {
           "date": "2021-11-15",
           "value": 6.3819
@@ -32480,12 +32456,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/CNY",
-      "synced_at": "2026-11-13T19:17:33.978755+00:00",
+      "synced_at": "2026-11-15T01:30:02.519701+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CNY",
       "update_type": "daily_reference",
-      "window_end": "2026-11-13",
-      "window_start": "2021-11-13"
+      "window_end": "2026-11-15",
+      "window_start": "2021-11-15"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -32506,10 +32482,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/CHF",
       "points": [
-        {
-          "date": "2021-11-12",
-          "value": 0.92313
-        },
         {
           "date": "2021-11-15",
           "value": 0.92039
@@ -37642,12 +37614,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/CHF",
-      "synced_at": "2026-11-13T19:17:33.978755+00:00",
+      "synced_at": "2026-11-15T01:30:02.519701+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CHF",
       "update_type": "daily_reference",
-      "window_end": "2026-11-13",
-      "window_start": "2021-11-13"
+      "window_end": "2026-11-15",
+      "window_start": "2021-11-15"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -37668,10 +37640,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "AUD/USD",
       "points": [
-        {
-          "date": "2021-11-12",
-          "value": 0.72964
-        },
         {
           "date": "2021-11-15",
           "value": 0.73656
@@ -42804,12 +42772,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "AUD/USD",
-      "synced_at": "2026-11-13T19:17:33.978755+00:00",
+      "synced_at": "2026-11-15T01:30:02.519701+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
-      "window_end": "2026-11-13",
-      "window_start": "2021-11-13"
+      "window_end": "2026-11-15",
+      "window_start": "2021-11-15"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -42830,10 +42798,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/CAD",
       "points": [
-        {
-          "date": "2021-11-12",
-          "value": 1.2593
-        },
         {
           "date": "2021-11-15",
           "value": 1.2525
@@ -47966,12 +47930,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/CAD",
-      "synced_at": "2026-11-13T19:17:33.978755+00:00",
+      "synced_at": "2026-11-15T01:30:02.519701+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CAD",
       "update_type": "daily_reference",
-      "window_end": "2026-11-13",
-      "window_start": "2021-11-13"
+      "window_end": "2026-11-15",
+      "window_start": "2021-11-15"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -47992,10 +47956,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/MXN",
       "points": [
-        {
-          "date": "2021-11-12",
-          "value": 20.656
-        },
         {
           "date": "2021-11-15",
           "value": 20.543
@@ -53128,12 +53088,12 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/MXN",
-      "synced_at": "2026-11-13T19:17:33.978755+00:00",
+      "synced_at": "2026-11-15T01:30:02.519701+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "MXN",
       "update_type": "daily_reference",
-      "window_end": "2026-11-13",
-      "window_start": "2021-11-13"
+      "window_end": "2026-11-15",
+      "window_start": "2021-11-15"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -53398,7 +53358,7 @@
       "id": "selic",
       "instrument": "Meta Selic",
       "latest": {
-        "date": "2026-11-13",
+        "date": "2026-11-15",
         "value": 13.75
       },
       "license": "ODbL-1.0",
@@ -53406,14 +53366,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Selic meta",
       "points": [
-        {
-          "date": "2021-11-13",
-          "value": 7.75
-        },
-        {
-          "date": "2021-11-14",
-          "value": 7.75
-        },
         {
           "date": "2021-11-15",
           "value": 7.75
@@ -60713,6 +60665,14 @@
         {
           "date": "2026-11-13",
           "value": 13.75
+        },
+        {
+          "date": "2026-11-14",
+          "value": 13.75
+        },
+        {
+          "date": "2026-11-15",
+          "value": 13.75
         }
       ],
       "provider": "bcb",
@@ -60722,12 +60682,12 @@
       "source_url": "https://dadosabertos.bcb.gov.br/",
       "status": "ok",
       "symbol": "432",
-      "synced_at": "2026-11-13T19:17:33.978755+00:00",
+      "synced_at": "2026-11-15T01:30:02.519701+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "% a.a.",
       "update_type": "daily_reference",
-      "window_end": "2026-11-13",
-      "window_start": "2021-11-13"
+      "window_end": "2026-11-15",
+      "window_start": "2021-11-15"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -60768,7 +60728,7 @@
       "id": "ecb",
       "instrument": "Taxa da facilidade permanente de depósito",
       "latest": {
-        "date": "2026-11-13",
+        "date": "2026-11-15",
         "value": 2.5
       },
       "license": "ECB reuse with attribution",
@@ -101492,6 +101452,14 @@
         {
           "date": "2026-11-13",
           "value": 2.5
+        },
+        {
+          "date": "2026-11-14",
+          "value": 2.5
+        },
+        {
+          "date": "2026-11-15",
+          "value": 2.5
         }
       ],
       "provider": "ecb",
@@ -101501,11 +101469,11 @@
       "source_url": "https://data.ecb.europa.eu/data/datasets/FM/FM.D.U2.EUR.4F.KR.DFR.LEV",
       "status": "ok",
       "symbol": "FM.D.U2.EUR.4F.KR.DFR.LEV",
-      "synced_at": "2026-11-13T19:17:33.978755+00:00",
+      "synced_at": "2026-11-15T01:30:02.519701+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "% a.a.",
       "update_type": "daily_reference",
-      "window_end": "2026-11-13",
+      "window_end": "2026-11-15",
       "window_start": "1999-01-01"
     },
     {
@@ -106978,7 +106946,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "PIB",
       "points": [
         {
@@ -107247,11 +107215,11 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
-      "status": "ok",
+      "status": "stale",
       "symbol": "NY.GDP.MKTP.CD",
       "synced_at": "2026-10-31T11:49:26.044195+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
@@ -107416,7 +107384,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "Crescimento do PIB",
       "points": [
         {
@@ -107681,11 +107649,11 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
-      "status": "ok",
+      "status": "stale",
       "symbol": "NY.GDP.MKTP.KD.ZG",
       "synced_at": "2026-10-31T11:49:26.044195+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
@@ -107710,7 +107678,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "PIB",
       "points": [
         {
@@ -107979,11 +107947,11 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
-      "status": "ok",
+      "status": "stale",
       "symbol": "NY.GDP.MKTP.CD",
       "synced_at": "2026-10-31T11:49:26.044195+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
@@ -108442,7 +108410,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "PIB",
       "points": [
         {
@@ -108711,11 +108679,11 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
-      "status": "ok",
+      "status": "stale",
       "symbol": "NY.GDP.MKTP.CD",
       "synced_at": "2026-10-31T11:49:26.044195+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
@@ -108880,7 +108848,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "Crescimento do PIB",
       "points": [
         {
@@ -109145,11 +109113,11 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
-      "status": "ok",
+      "status": "stale",
       "symbol": "NY.GDP.MKTP.KD.ZG",
       "synced_at": "2026-10-31T11:49:26.044195+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
@@ -109174,7 +109142,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "PIB",
       "points": [
         {
@@ -109443,11 +109411,11 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
-      "status": "ok",
+      "status": "stale",
       "symbol": "NY.GDP.MKTP.CD",
       "synced_at": "2026-10-31T11:49:26.044195+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
@@ -109612,7 +109580,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "Crescimento do PIB",
       "points": [
         {
@@ -109877,11 +109845,11 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
-      "status": "ok",
+      "status": "stale",
       "symbol": "NY.GDP.MKTP.KD.ZG",
       "synced_at": "2026-10-31T11:49:26.044195+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
@@ -109906,7 +109874,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "PIB",
       "points": [
         {
@@ -110175,11 +110143,11 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
-      "status": "ok",
+      "status": "stale",
       "symbol": "NY.GDP.MKTP.CD",
       "synced_at": "2026-10-31T11:49:26.044195+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
@@ -110344,7 +110312,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "Crescimento do PIB",
       "points": [
         {
@@ -110609,11 +110577,11 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
-      "status": "ok",
+      "status": "stale",
       "symbol": "NY.GDP.MKTP.KD.ZG",
       "synced_at": "2026-10-31T11:49:26.044195+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
@@ -110638,7 +110606,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "PIB",
       "points": [
         {
@@ -110907,11 +110875,11 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
-      "status": "ok",
+      "status": "stale",
       "symbol": "NY.GDP.MKTP.CD",
       "synced_at": "2026-11-07T19:06:11.601729+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
@@ -111076,7 +111044,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "Crescimento do PIB",
       "points": [
         {
@@ -111341,11 +111309,11 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
-      "status": "ok",
+      "status": "stale",
       "symbol": "NY.GDP.MKTP.KD.ZG",
       "synced_at": "2026-10-31T11:49:26.044195+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
@@ -111808,7 +111776,7 @@
       },
       "license": "CC-BY-4.0 + World Bank terms",
       "license_url": "https://datacatalog.worldbank.org/public-licenses",
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "Crescimento do PIB",
       "points": [
         {
@@ -112073,11 +112041,11 @@
         }
       ],
       "provider": "worldbank",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "World Development Indicators; atividade industrial não é produção industrial mensal",
       "source": "World Bank · WDI",
       "source_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
-      "status": "ok",
+      "status": "stale",
       "symbol": "NY.GDP.MKTP.KD.ZG",
       "synced_at": "2026-10-31T11:49:26.044195+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
