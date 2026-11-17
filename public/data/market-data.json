@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T07:42:00.685387+00:00",
+  "generated_at": "2026-11-17T19:25:53.000444+00:00",
   "note": "Dados reais de fontes identificadas; atualização periódica, sem garantia de tempo real. Licenças independentes por série.",
   "schema_version": 1,
   "series": [
@@ -1526,8 +1526,8 @@
       "id": "usdbrl",
       "instrument": "",
       "latest": {
-        "date": "2026-11-16",
-        "value": 5.7053
+        "date": "2026-11-17",
+        "value": 5.7821
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -6653,6 +6653,10 @@
         {
           "date": "2026-11-16",
           "value": 5.7053
+        },
+        {
+          "date": "2026-11-17",
+          "value": 5.7821
         }
       ],
       "provider": "fx",
@@ -6662,7 +6666,7 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "USD/BRL",
-      "synced_at": "2026-11-17T01:35:47.588070+00:00",
+      "synced_at": "2026-11-17T19:25:53.000444+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "BRL",
       "update_type": "daily_reference",
@@ -6680,12 +6684,12 @@
       "id": "eurbrl",
       "instrument": "",
       "latest": {
-        "date": "2026-11-16",
-        "value": 6.2838
+        "date": "2026-11-17",
+        "value": 6.3539
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
-      "message": "Último histórico válido preservado após falha da fonte.",
+      "message": "Referência publicada; não é preço em tempo real.",
       "name": "EUR/BRL",
       "points": [
         {
@@ -11807,16 +11811,20 @@
         {
           "date": "2026-11-16",
           "value": 6.2838
+        },
+        {
+          "date": "2026-11-17",
+          "value": 6.3539
         }
       ],
       "provider": "fx",
-      "reason": "cached_after_failure",
+      "reason": "available",
       "reference": "Referência diária BCE; sem negociação intradiária",
       "source": "Frankfurter · BCE",
       "source_url": "https://frankfurter.dev/",
-      "status": "stale",
+      "status": "ok",
       "symbol": "EUR/BRL",
-      "synced_at": "2026-11-17T01:35:47.588070+00:00",
+      "synced_at": "2026-11-17T19:25:53.000444+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "BRL",
       "update_type": "daily_reference",
@@ -11834,8 +11842,8 @@
       "id": "eurusd",
       "instrument": "",
       "latest": {
-        "date": "2026-11-16",
-        "value": 1.1014
+        "date": "2026-11-17",
+        "value": 1.0989
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
@@ -16961,6 +16969,10 @@
         {
           "date": "2026-11-16",
           "value": 1.1014
+        },
+        {
+          "date": "2026-11-17",
+          "value": 1.0989
         }
       ],
       "provider": "fx",
@@ -16970,7 +16982,7 @@
       "source_url": "https://frankfurter.dev/",
       "status": "ok",
       "symbol": "EUR/USD",
-      "synced_at": "2026-11-17T01:35:47.588070+00:00",
+      "synced_at": "2026-11-17T19:25:53.000444+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
@@ -16988,12 +17000,12 @@
       "id": "gbpusd",
       "instrument": "",
       "latest": {
-        "date": "2026-11-16",
-        "value": 1.3198
+        "date": "2026-11-17",
+        "value": 1.3191
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
-      "message": "Último histórico válido preservado após falha da fonte.",
+      "message": "Referência publicada; não é preço em tempo real.",
       "name": "GBP/USD",
       "points": [
         {
@@ -22115,16 +22127,20 @@
         {
           "date": "2026-11-16",
           "value": 1.3198
+        },
+        {
+          "date": "2026-11-17",
+          "value": 1.3191
         }
       ],
       "provider": "fx",
-      "reason": "cached_after_failure",
+      "reason": "available",
       "reference": "Referência diária BCE; sem negociação intradiária",
       "source": "Frankfurter · BCE",
       "source_url": "https://frankfurter.dev/",
-      "status": "stale",
+      "status": "ok",
       "symbol": "GBP/USD",
-      "synced_at": "2026-11-17T01:35:47.588070+00:00",
+      "synced_at": "2026-11-17T19:25:53.000444+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
@@ -22142,12 +22158,12 @@
       "id": "usdjpy",
       "instrument": "",
       "latest": {
-        "date": "2026-11-16",
-        "value": 159.6
+        "date": "2026-11-17",
+        "value": 159.3
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
-      "message": "Último histórico válido preservado após falha da fonte.",
+      "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/JPY",
       "points": [
         {
@@ -27269,16 +27285,20 @@
         {
           "date": "2026-11-16",
           "value": 159.6
+        },
+        {
+          "date": "2026-11-17",
+          "value": 159.3
         }
       ],
       "provider": "fx",
-      "reason": "cached_after_failure",
+      "reason": "available",
       "reference": "Referência diária BCE; sem negociação intradiária",
       "source": "Frankfurter · BCE",
       "source_url": "https://frankfurter.dev/",
-      "status": "stale",
+      "status": "ok",
       "symbol": "USD/JPY",
-      "synced_at": "2026-11-17T01:35:47.588070+00:00",
+      "synced_at": "2026-11-17T19:25:53.000444+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "JPY",
       "update_type": "daily_reference",
@@ -27296,12 +27316,12 @@
       "id": "usdcny",
       "instrument": "",
       "latest": {
-        "date": "2026-11-16",
-        "value": 6.6665
+        "date": "2026-11-17",
+        "value": 6.6661
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
-      "message": "Último histórico válido preservado após falha da fonte.",
+      "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/CNY",
       "points": [
         {
@@ -32423,16 +32443,20 @@
         {
           "date": "2026-11-16",
           "value": 6.6665
+        },
+        {
+          "date": "2026-11-17",
+          "value": 6.6661
         }
       ],
       "provider": "fx",
-      "reason": "cached_after_failure",
+      "reason": "available",
       "reference": "Referência diária BCE; sem negociação intradiária",
       "source": "Frankfurter · BCE",
       "source_url": "https://frankfurter.dev/",
-      "status": "stale",
+      "status": "ok",
       "symbol": "USD/CNY",
-      "synced_at": "2026-11-17T01:35:47.588070+00:00",
+      "synced_at": "2026-11-17T19:25:53.000444+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CNY",
       "update_type": "daily_reference",
@@ -32450,12 +32474,12 @@
       "id": "usdchf",
       "instrument": "",
       "latest": {
-        "date": "2026-11-16",
-        "value": 0.8393
+        "date": "2026-11-17",
+        "value": 0.8402
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
-      "message": "Último histórico válido preservado após falha da fonte.",
+      "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/CHF",
       "points": [
         {
@@ -37577,16 +37601,20 @@
         {
           "date": "2026-11-16",
           "value": 0.8393
+        },
+        {
+          "date": "2026-11-17",
+          "value": 0.8402
         }
       ],
       "provider": "fx",
-      "reason": "cached_after_failure",
+      "reason": "available",
       "reference": "Referência diária BCE; sem negociação intradiária",
       "source": "Frankfurter · BCE",
       "source_url": "https://frankfurter.dev/",
-      "status": "stale",
+      "status": "ok",
       "symbol": "USD/CHF",
-      "synced_at": "2026-11-17T01:35:47.588070+00:00",
+      "synced_at": "2026-11-17T19:25:53.000444+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CHF",
       "update_type": "daily_reference",
@@ -37604,12 +37632,12 @@
       "id": "audusd",
       "instrument": "",
       "latest": {
-        "date": "2026-11-16",
-        "value": 0.67566
+        "date": "2026-11-17",
+        "value": 0.67351
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
-      "message": "Último histórico válido preservado após falha da fonte.",
+      "message": "Referência publicada; não é preço em tempo real.",
       "name": "AUD/USD",
       "points": [
         {
@@ -42731,16 +42759,20 @@
         {
           "date": "2026-11-16",
           "value": 0.67566
+        },
+        {
+          "date": "2026-11-17",
+          "value": 0.67351
         }
       ],
       "provider": "fx",
-      "reason": "cached_after_failure",
+      "reason": "available",
       "reference": "Referência diária BCE; sem negociação intradiária",
       "source": "Frankfurter · BCE",
       "source_url": "https://frankfurter.dev/",
-      "status": "stale",
+      "status": "ok",
       "symbol": "AUD/USD",
-      "synced_at": "2026-11-17T01:35:47.588070+00:00",
+      "synced_at": "2026-11-17T19:25:53.000444+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "USD",
       "update_type": "daily_reference",
@@ -42758,12 +42790,12 @@
       "id": "usdcad",
       "instrument": "",
       "latest": {
-        "date": "2026-11-16",
-        "value": 1.4285
+        "date": "2026-11-17",
+        "value": 1.4291
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
-      "message": "Último histórico válido preservado após falha da fonte.",
+      "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/CAD",
       "points": [
         {
@@ -47885,16 +47917,20 @@
         {
           "date": "2026-11-16",
           "value": 1.4285
+        },
+        {
+          "date": "2026-11-17",
+          "value": 1.4291
         }
       ],
       "provider": "fx",
-      "reason": "cached_after_failure",
+      "reason": "available",
       "reference": "Referência diária BCE; sem negociação intradiária",
       "source": "Frankfurter · BCE",
       "source_url": "https://frankfurter.dev/",
-      "status": "stale",
+      "status": "ok",
       "symbol": "USD/CAD",
-      "synced_at": "2026-11-17T01:35:47.588070+00:00",
+      "synced_at": "2026-11-17T19:25:53.000444+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "CAD",
       "update_type": "daily_reference",
@@ -47912,12 +47948,12 @@
       "id": "usdmxn",
       "instrument": "",
       "latest": {
-        "date": "2026-11-16",
-        "value": 18.5608
+        "date": "2026-11-17",
+        "value": 18.4635
       },
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
-      "message": "Último histórico válido preservado após falha da fonte.",
+      "message": "Referência publicada; não é preço em tempo real.",
       "name": "USD/MXN",
       "points": [
         {
@@ -53039,16 +53075,20 @@
         {
           "date": "2026-11-16",
           "value": 18.5608
+        },
+        {
+          "date": "2026-11-17",
+          "value": 18.4635
         }
       ],
       "provider": "fx",
-      "reason": "cached_after_failure",
+      "reason": "available",
       "reference": "Referência diária BCE; sem negociação intradiária",
       "source": "Frankfurter · BCE",
       "source_url": "https://frankfurter.dev/",
-      "status": "stale",
+      "status": "ok",
       "symbol": "USD/MXN",
-      "synced_at": "2026-11-17T01:35:47.588070+00:00",
+      "synced_at": "2026-11-17T19:25:53.000444+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "MXN",
       "update_type": "daily_reference",
