@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T01:41:42.200779+00:00",
+  "generated_at": "2026-11-18T13:36:54.230512+00:00",
   "note": "Dados reais de fontes identificadas; atualização periódica, sem garantia de tempo real. Licenças independentes por série.",
   "schema_version": 1,
   "series": [
@@ -53318,7 +53318,7 @@
       "id": "selic",
       "instrument": "Meta Selic",
       "latest": {
-        "date": "2026-11-17",
+        "date": "2026-11-18",
         "value": 13.75
       },
       "license": "ODbL-1.0",
@@ -53326,10 +53326,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Selic meta",
       "points": [
-        {
-          "date": "2021-11-17",
-          "value": 7.75
-        },
         {
           "date": "2021-11-18",
           "value": 7.75
@@ -60633,6 +60629,10 @@
         {
           "date": "2026-11-17",
           "value": 13.75
+        },
+        {
+          "date": "2026-11-18",
+          "value": 13.75
         }
       ],
       "provider": "bcb",
@@ -60642,12 +60642,12 @@
       "source_url": "https://dadosabertos.bcb.gov.br/",
       "status": "ok",
       "symbol": "432",
-      "synced_at": "2026-11-17T07:42:00.685387+00:00",
+      "synced_at": "2026-11-18T13:36:54.230512+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "% a.a.",
       "update_type": "daily_reference",
-      "window_end": "2026-11-17",
-      "window_start": "2021-11-17"
+      "window_end": "2026-11-18",
+      "window_start": "2021-11-18"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
@@ -60694,7 +60694,7 @@
       "license": "ECB reuse with attribution",
       "license_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
       "max_age_days": 36525,
-      "message": "Referência publicada; não é preço em tempo real.",
+      "message": "Último histórico válido preservado após falha da fonte.",
       "name": "BCE",
       "points": [
         {
@@ -101431,11 +101431,11 @@
         }
       ],
       "provider": "ecb",
-      "reason": "available",
+      "reason": "cached_after_failure",
       "reference": "policy_change",
       "source": "Banco Central Europeu · Data API",
       "source_url": "https://data.ecb.europa.eu/data/datasets/FM/FM.D.U2.EUR.4F.KR.DFR.LEV",
-      "status": "ok",
+      "status": "stale",
       "symbol": "FM.D.U2.EUR.4F.KR.DFR.LEV",
       "synced_at": "2026-11-17T07:42:00.685387+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
@@ -101539,7 +101539,7 @@
       "id": "boc",
       "instrument": "Target for the overnight rate",
       "latest": {
-        "date": "2026-11-13",
+        "date": "2026-11-16",
         "value": 2.5
       },
       "license": "Bank of Canada reproduction terms",
@@ -101547,10 +101547,6 @@
       "message": "Referência publicada; não é preço em tempo real.",
       "name": "Bank of Canada",
       "points": [
-        {
-          "date": "2021-11-17",
-          "value": 0.25
-        },
         {
           "date": "2021-11-18",
           "value": 0.25
@@ -106710,6 +106706,10 @@
         {
           "date": "2026-11-13",
           "value": 2.5
+        },
+        {
+          "date": "2026-11-16",
+          "value": 2.5
         }
       ],
       "provider": "boc",
@@ -106719,12 +106719,12 @@
       "source_url": "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/",
       "status": "ok",
       "symbol": "V39079",
-      "synced_at": "2026-11-17T07:42:00.685387+00:00",
+      "synced_at": "2026-11-18T13:36:54.230512+00:00",
       "transformations": "Datas normalizadas; recortes sem interpolação; comparações calculadas na interface.",
       "unit": "%",
       "update_type": "daily_reference",
-      "window_end": "2026-11-17",
-      "window_start": "2021-11-17"
+      "window_end": "2026-11-18",
+      "window_start": "2021-11-18"
     },
     {
       "attribution": "Fonte indicada por série; New Era Labs não é endossado pelos provedores.",
